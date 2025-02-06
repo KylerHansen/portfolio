@@ -18,9 +18,13 @@ function App() {
       <h1>Coming Soon</h1>
 
       <nav>
-        <Link to={Routes.HOME}>Home</Link>
+        <Link to={Routes.Home}>Home</Link>
         {" | "}
-        <Link to={Routes.CONTACT}>Contact</Link>
+        <Link to={Routes.Games}>Games</Link>
+        {" | "}
+        <Link to={Routes.Blog}>Blog</Link>
+        {" | "}
+        <Link to={Routes.Websites}>Websites</Link>
       </nav>
 
       <Outlet />

@@ -3,26 +3,41 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Home } from "./pages/home.tsx";
-import { Contact } from "./pages/contact.tsx";
+import { Home } from "./pages/home.page.tsx";
+import { Blog } from "./pages/blog.page.tsx";
+import { Games } from "./pages/games.page.tsx";
+import { Websites } from "./pages/websites.page.tsx";
 
+/**
+ * If updating this, also update App.tsx
+ */
 export enum Routes {
-  HOME = "/portfolio/",
-  CONTACT = "/portfolio/contact",
+  Home = "/portfolio/",
+  Blog = "/portfolio/blog",
+  Games = "/portfolio/games",
+  Websites = "/portfolio/demo-websites",
 }
 
 const router = createBrowserRouter([
   {
-    path: Routes.HOME,
+    path: Routes.Home,
     element: <App />,
     children: [
       {
-        path: Routes.HOME,
+        path: Routes.Home,
         element: <Home />,
       },
       {
-        path: Routes.CONTACT,
-        element: <Contact />,
+        path: Routes.Blog,
+        element: <Blog />,
+      },
+      {
+        path: Routes.Games,
+        element: <Games />,
+      },
+      {
+        path: Routes.Websites,
+        element: <Websites />,
       },
     ],
   },
