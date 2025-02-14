@@ -3,10 +3,11 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Home } from "./pages/home.page.tsx";
+import { Home } from "./pages/home/home.page.tsx";
 import { Blog } from "./pages/blog.page.tsx";
 import { Games } from "./pages/games.page.tsx";
 import { Websites } from "./pages/websites.page.tsx";
+import { About } from "./pages/about.page.tsx";
 
 /**
  * If updating this, also update App.tsx
@@ -16,6 +17,7 @@ export enum Routes {
   Blog = "/portfolio/blog",
   Games = "/portfolio/games",
   Websites = "/portfolio/demo-websites",
+  About = "/portfolio/about",
 }
 
 const router = createBrowserRouter([
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: Routes.Websites,
         element: <Websites />,
+      },
+      {
+        path: Routes.About,
+        element: <About />,
       },
     ],
   },
