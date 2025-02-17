@@ -1,14 +1,18 @@
 import "./App.css";
 import { Link, Outlet } from "react-router-dom";
 import { Routes } from "./main";
+import { Menu, MountainSnow, X } from "lucide-react";
+import { useState } from "react";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <nav>
+      <nav className="standard-nav">
         <Link to={Routes.Home}>HOME</Link>
         {" | "}
-        <Link to={Routes.Games}>GAMES</Link>
+        <Link to={Routes.Projects}>PROJECTS</Link>
         {" | "}
         <Link to={Routes.Blog}>BLOG</Link>
         {" | "}
@@ -16,6 +20,49 @@ function App() {
         {" | "}
         <Link to={Routes.About}>ABOUT</Link>
       </nav>
+
+      {!isOpen ? (
+        <nav className="mobile-menu-icon">
+          <MountainSnow strokeWidth={1} />
+          <Menu
+            onClick={() => {
+              setIsOpen(true);
+            }}
+            strokeWidth={1}
+          />
+        </nav>
+      ) : (
+        <nav className="mobile-menu-icon">
+          <MountainSnow strokeWidth={1} />
+          <X
+            className="close-mobile-nav"
+            onClick={() => setIsOpen(false)}
+            strokeWidth={1}
+          />
+        </nav>
+      )}
+
+      {isOpen ? (
+        <div className="mobile-nav">
+          <Link to={Routes.Home} onClick={() => setIsOpen(false)}>
+            HOME
+          </Link>
+          <Link to={Routes.Projects} onClick={() => setIsOpen(false)}>
+            PROJECTS
+          </Link>
+          <Link to={Routes.Blog} onClick={() => setIsOpen(false)}>
+            BLOG
+          </Link>
+          <Link to={Routes.Websites} onClick={() => setIsOpen(false)}>
+            WEBSITES
+          </Link>
+          <Link to={Routes.About} onClick={() => setIsOpen(false)}>
+            ABOUT
+          </Link>
+        </div>
+      ) : (
+        <></>
+      )}
 
       <Outlet />
 

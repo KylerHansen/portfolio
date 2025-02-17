@@ -1,7 +1,7 @@
-export function Blog() {
+export function Projects() {
   return (
     <div>
-      <h1>Blog</h1>
+      <h1>Projects</h1>
       <p>Coming Soon</p>
     </div>
   );

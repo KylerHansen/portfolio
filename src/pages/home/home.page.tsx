@@ -18,7 +18,6 @@ export function Home() {
 
   useEffect(() => {
     const currentMonth = new Date().getMonth();
-    console.log("setting image url to ", seasonImages[getSeason(currentMonth)]);
     setImageUrl(seasonImages[getSeason(currentMonth)]);
   }, []);
 

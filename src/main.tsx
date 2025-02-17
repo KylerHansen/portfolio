@@ -5,7 +5,7 @@ import App from "./App.tsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/home/home.page.tsx";
 import { Blog } from "./pages/blog.page.tsx";
-import { Games } from "./pages/games.page.tsx";
+import { Projects } from "./pages/projects.page.tsx";
 import { Websites } from "./pages/websites.page.tsx";
 import { About } from "./pages/about.page.tsx";
 
@@ -15,7 +15,7 @@ import { About } from "./pages/about.page.tsx";
 export enum Routes {
   Home = "/portfolio/",
   Blog = "/portfolio/blog",
-  Games = "/portfolio/games",
+  Projects = "/portfolio/projects",
   Websites = "/portfolio/demo-websites",
   About = "/portfolio/about",
 }
@@ -34,8 +34,8 @@ const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: Routes.Games,
-        element: <Games />,
+        path: Routes.Projects,
+        element: <Projects />,
       },
       {
         path: Routes.Websites,
