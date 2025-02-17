@@ -43,8 +43,8 @@ footer {
 
 .mobile-nav {
   display: flex;
-  gap: 40px;
-  padding: 50px 20px 20px 20px;
+  gap: 60px;
+  padding: 60px 20px 20px 20px;
   flex-direction: column;
   background-color: rgb(39, 51, 41, 0.9);
   position: fixed;
@@ -52,7 +52,12 @@ footer {
   height: 100%;
   z-index: 1;
   top: 60px;
+  font-size: 20px;
   @container (min-width: 768px) {
     display: none;
   }
+}
+
+.mobile-nav a {
+  font-weight: 200;
 }

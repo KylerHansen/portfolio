@@ -23,22 +23,17 @@ function App() {
 
       {!isOpen ? (
         <nav className="mobile-menu-icon">
-          <MountainSnow strokeWidth={1} />
+          <MountainSnow />
           <Menu
             onClick={() => {
               setIsOpen(true);
             }}
-            strokeWidth={1}
           />
         </nav>
       ) : (
         <nav className="mobile-menu-icon">
-          <MountainSnow strokeWidth={1} />
-          <X
-            className="close-mobile-nav"
-            onClick={() => setIsOpen(false)}
-            strokeWidth={1}
-          />
+          <MountainSnow />
+          <X className="close-mobile-nav" onClick={() => setIsOpen(false)} />
         </nav>
       )}
 
