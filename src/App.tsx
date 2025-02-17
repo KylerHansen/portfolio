@@ -68,7 +68,9 @@ function App() {
 
       <footer>
         <p>© Copyright {new Date().getFullYear()}</p>
-        <a href="www.linkedin.com/in/kyler-hansen-a365991a5">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/kyler-hansen-a365991a5">
+          LinkedIn
+        </a>
       </footer>
     </>
   );
