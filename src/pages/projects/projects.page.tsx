@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./projects.css";
 import { X } from "lucide-react";
+import attendance from "../../assets/attendance.png";
+import mahjong from "../../assets/mahjong.png";
+import textMyWaiter from "../../assets/text-my-waiter-logo.png";
+import defaultCodingPic from "../../assets/coding.jpg";
 
 export function Projects() {
   const [appliedFilters, setAppliedFilter] = useState<ProjectKeywords[]>([]);
@@ -36,7 +40,7 @@ export function Projects() {
       title: "Attendance Counter",
       description:
         "This is a native android app I made for counting and graphing attendance.",
-      image: "/portfolio/assets/attendance.png",
+      image: attendance,
       keywords: [
         ProjectKeywords.Java,
         ProjectKeywords.Android,
@@ -47,7 +51,7 @@ export function Projects() {
       title: "Text My Waiter",
       description:
         "I created this mobile app as a way for customers to text their waiter.",
-      image: "/portfolio/assets/text-my-waiter-logo.png",
+      image: textMyWaiter,
       keywords: [
         ProjectKeywords.React,
         ProjectKeywords.Firebase,
@@ -59,14 +63,14 @@ export function Projects() {
     {
       title: "Mahjong",
       description: "This is a game I made as part of a java class project.",
-      image: "/portfolio/assets/mahjong.png",
+      image: mahjong,
       keywords: [ProjectKeywords.Java, ProjectKeywords.School],
     },
     {
       title: "Johari",
       description:
         "One of my full stack senior projects, a psychology test called Johari Window.",
-      image: "/portfolio/assets/sloth.webp",
+      image: defaultCodingPic,
       keywords: [
         ProjectKeywords.Asp,
         ProjectKeywords.Csharp,
@@ -80,7 +84,7 @@ export function Projects() {
       title: "Custom Ringtone",
       description:
         "Created a call center feature that allowed users to set a custom ringtone for their user account. This improved employee morale and was my hackathon project",
-      image: "/portfolio/assets/sloth.webp",
+      image: defaultCodingPic,
       keywords: [
         ProjectKeywords.Typescript,
         ProjectKeywords.Twilio,
@@ -95,7 +99,7 @@ export function Projects() {
       title: "SMS Chat Messaging",
       description:
         "Created a chat messaging feature that allowed the call center users to respond to both website chat widgets and SMS messages for hundreds of companies.",
-      image: "/portfolio/assets/sloth.webp",
+      image: defaultCodingPic,
       keywords: [
         ProjectKeywords.Typescript,
         ProjectKeywords.Twilio,
@@ -111,7 +115,7 @@ export function Projects() {
       title: "Call Dashboard Overhaul UX/UI",
       description:
         "Completely redesigned the call dashboard to improve the user experience, increase efficiency, and reduce employee mistakes.",
-      image: "/portfolio/assets/sloth.webp",
+      image: defaultCodingPic,
       keywords: [
         ProjectKeywords.Typescript,
         ProjectKeywords.HTML,

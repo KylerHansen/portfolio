@@ -1,7 +1,6 @@
 import { BicepsFlexed, HeartHandshake, Scale, Sprout } from "lucide-react";
 import "./home.css";
 import { useEffect, useState } from "react";
-import winterBanner from "../../assets/winterBanner.png";
 import springBanner from "../../assets/springBanner.png";
 import summerBanner from "../../assets/summerBanner.png";
 import fallBanner from "../../assets/fallBanner.png";
@@ -10,7 +9,7 @@ export function Home() {
   const [imageBanner, setImageUrl] = useState("");
 
   const seasonImages = {
-    winter: winterBanner,
+    winter: summerBanner,
     spring: springBanner,
     summer: summerBanner,
     fall: fallBanner,
