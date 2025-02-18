@@ -68,7 +68,7 @@
 .cs-card {
   width: 170px;
   height: 170px;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   color: var(--background-light);
   box-sizing: border-box;
   padding: 16px;

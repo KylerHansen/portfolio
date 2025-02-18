@@ -8,8 +8,10 @@
   -moz-osx-font-smoothing: grayscale;
 
   --primary-color: #426147;
+  --primary-light: #5a8663;
 
   --secondary-color: #8a4d2e;
+  --secondary-light: #a86549;
 
   --background-dark: #273329;
   --background-dark-transparent: rgb(39, 51, 41, 0.9);
@@ -19,6 +21,8 @@
 
   --accent-color: #906e33;
   --secondary-accent: #3f2c1b;
+
+  --border-radius: 16px;
 }
 
 a {

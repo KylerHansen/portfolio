@@ -1,0 +1,85 @@
+.project-page {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 75%;
+  padding-bottom: 40px;
+}
+
+.filters button {
+  color: var(--background-light);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.inactive {
+  background-color: var(--primary-color);
+}
+
+.inactive:hover {
+  background-color: var(--primary-light);
+}
+
+.active {
+  background-color: var(--secondary-color);
+}
+
+.active:hover {
+  background-color: var(--secondary-light);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-self: center;
+  gap: 52px;
+
+  @container (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.project-card {
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 200px;
+}
+
+.project-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.project-title {
+  font-size: 20px;
+}
+
+.project-description {
+  color: var(--text-dark);
+}
+
+.project-keywords {
+  font-size: 14px;
+  font-style: italic;
+}

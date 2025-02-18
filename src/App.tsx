@@ -16,8 +16,6 @@ function App() {
         {" | "}
         <Link to={Routes.Blog}>BLOG</Link>
         {" | "}
-        <Link to={Routes.Websites}>WEBSITES</Link>
-        {" | "}
         <Link to={Routes.About}>ABOUT</Link>
       </nav>
 
@@ -47,9 +45,6 @@ function App() {
           </Link>
           <Link to={Routes.Blog} onClick={() => setIsOpen(false)}>
             BLOG
-          </Link>
-          <Link to={Routes.Websites} onClick={() => setIsOpen(false)}>
-            WEBSITES
           </Link>
           <Link to={Routes.About} onClick={() => setIsOpen(false)}>
             ABOUT
