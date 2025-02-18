@@ -36,7 +36,7 @@ export function Projects() {
       title: "Attendance Counter",
       description:
         "This is a native android app I made for counting and graphing attendance.",
-      image: "src/assets/attendance.png",
+      image: "/portfolio/assets/attendance.png",
       keywords: [
         ProjectKeywords.Java,
         ProjectKeywords.Android,
@@ -47,7 +47,7 @@ export function Projects() {
       title: "Text My Waiter",
       description:
         "I created this mobile app as a way for customers to text their waiter.",
-      image: "src/assets/text-my-waiter-logo.png",
+      image: "/portfolio/assets/text-my-waiter-logo.png",
       keywords: [
         ProjectKeywords.React,
         ProjectKeywords.Firebase,
@@ -59,14 +59,14 @@ export function Projects() {
     {
       title: "Mahjong",
       description: "This is a game I made as part of a java class project.",
-      image: "src/assets/mahjong.png",
+      image: "/portfolio/assets/mahjong.png",
       keywords: [ProjectKeywords.Java, ProjectKeywords.School],
     },
     {
       title: "Johari",
       description:
         "One of my full stack senior projects, a psychology test called Johari Window.",
-      image: "src/assets/sloth.webp",
+      image: "/portfolio/assets/sloth.webp",
       keywords: [
         ProjectKeywords.Asp,
         ProjectKeywords.Csharp,
@@ -80,7 +80,7 @@ export function Projects() {
       title: "Custom Ringtone",
       description:
         "Created a call center feature that allowed users to set a custom ringtone for their user account. This improved employee morale and was my hackathon project",
-      image: "src/assets/sloth.webp",
+      image: "/portfolio/assets/sloth.webp",
       keywords: [
         ProjectKeywords.Typescript,
         ProjectKeywords.Twilio,
@@ -95,7 +95,7 @@ export function Projects() {
       title: "SMS Chat Messaging",
       description:
         "Created a chat messaging feature that allowed the call center users to respond to both website chat widgets and SMS messages for hundreds of companies.",
-      image: "src/assets/sloth.webp",
+      image: "/portfolio/assets/sloth.webp",
       keywords: [
         ProjectKeywords.Typescript,
         ProjectKeywords.Twilio,
@@ -111,7 +111,7 @@ export function Projects() {
       title: "Call Dashboard Overhaul UX/UI",
       description:
         "Completely redesigned the call dashboard to improve the user experience, increase efficiency, and reduce employee mistakes.",
-      image: "src/assets/sloth.webp",
+      image: "/portfolio/assets/sloth.webp",
       keywords: [
         ProjectKeywords.Typescript,
         ProjectKeywords.HTML,
