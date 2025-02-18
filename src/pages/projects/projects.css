@@ -63,12 +63,14 @@
   flex-direction: column;
   gap: 12px;
   width: 200px;
+  align-items: center;
 }
 
 .project-image {
   height: 200px;
+  width: 200px;
   object-fit: cover;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: var(--border-radius);
 }
 
 .project-title {
