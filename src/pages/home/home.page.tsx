@@ -57,6 +57,10 @@ export function Home() {
         className="banner"
         style={{ backgroundImage: `url(${imageBanner})` }}
       ></div>
+      <div className="banner-text">
+        <div className="title">KYLER HANSEN</div>
+        <div className="subtitle">SOFTWARE DEVELOPER</div>
+      </div>
       <div className="card">
         <div className="section">
           <h1>PURPOSE STATEMENT</h1>
