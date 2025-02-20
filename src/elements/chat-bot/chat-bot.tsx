@@ -75,6 +75,11 @@ export function ChatBot(): React.ReactElement {
             onClick={() => {
               setMessages([...messages, { user: "user", body: newMessage }]);
               setNewMessage("");
+              //use Gemini AI
+              /*  fetch("https://hooks.zapier.com/hooks/catch/18368268/2wj35it/", {
+                method: "POST",
+                body: JSON.stringify({ message: newMessage }),
+              }); */
               //TODO: Find a free API to use for this. Or link it to zapier to actually text me.
               //send new message to chatBot and populate response.
               //toggle new message state.
