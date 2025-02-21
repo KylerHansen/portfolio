@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+packages/app/backend/.env
+
+packages/app/frontend/node_modules
+packages/app/backend/node_modules
+packages/common/universal/node_modules

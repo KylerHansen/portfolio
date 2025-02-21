@@ -1,0 +1,8 @@
+{
+  "name": "@portfolio/common-universal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

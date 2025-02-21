@@ -1,35 +1,26 @@
 {
-  "name": "portfolio",
-  "homepage": "https://kylerhansen.github.io/portfolio/",
+  "name": "@portfolio/root",
+  "license": "All Rights Reserved",
+  "author": "Kyler Hansen",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "packages/app/*",
+    "packages/common/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run dev -w packages/app/frontend\" \"npm run dev -w packages/app/backend\""
   },
-  "dependencies": {
-    "gh-pages": "^6.3.0",
-    "lucide-react": "^0.475.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.5"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.17.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.18.2"
   }
 }
