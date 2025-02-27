@@ -1,0 +1,32 @@
+service: express-lambda
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-west-2
+  memorySize: 128
+  timeout: 10
+  environment:
+    NODE_ENV: ${opt:stage, 'production'}
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-include-dependencies
+
+functions:
+  server:
+    handler: dist/server.handler
+    events:
+      - http:
+          path: /health
+          method: get
+          cors: true
+      - http:
+          path: /askJarvis
+          method: post
+          cors: true
+package:
+  excludeDevDependencies: false
+  patterns:
+    - node_modules/**
+    - dist/**
