@@ -6,7 +6,7 @@
     "target": "ESNext",
     "resolveJsonModule": true,
     "moduleDetection": "force",
-
+    "jsx": "react-jsx",
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
@@ -20,5 +20,8 @@
     "composite": true,
     "declarationMap": true
   },
-  "exclude": ["node_modules", "./dist/", "**/node_modules"]
+  "exclude": ["node_modules", "./dist/", "**/node_modules"],
+  "include": ["declaration.d.ts"]
 }
+
+//fix this to ignore node_modules
