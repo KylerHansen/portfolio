@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import * as React from "react";
 import "./chat-bot.css";
 import { MessageCircleQuestion, SendHorizontal, X } from "lucide-react";
+import { defineShape, isValidShape } from "object-shape-tester";
 
 export function ChatBot(): React.ReactElement {
   const [isOpen, setIsOpen] = useState(false);
-  const [showNewMessage, setShowNewMessage] = useState(true);
+  const [newMessage, setNewMessage] = useState("");
+  const [messageInput, setMessageInput] = useState("");
 
   /**TODO: Probably want to store this in session storage instead. */
   const [messages, setMessages] = useState<
@@ -16,26 +18,23 @@ export function ChatBot(): React.ReactElement {
   >([
     {
       user: "bot",
-      body: "Hello my name is Jarvis! I'm an AI bot trained on information about Kyler. Feel free to ask me a question!",
+      body: "Hello my name is Jarvis! I'm an AI ready to answer information about Kyler. Feel free to ask me a question, like what is Kyler's work experience.",
     },
-    { user: "user", body: "What is Kyler's favorite color?" },
   ]);
 
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
 
-  const [newMessage, setNewMessage] = useState("");
-
   if (!isOpen) {
     return (
       <div className="chat-widget">
-        {showNewMessage ? <div className="new-message-bubble">1</div> : ""}
+        {newMessage ? <div className="new-message-bubble">1</div> : ""}
         <button
           className="closed-chat-bot"
           onClick={() => {
             setIsOpen(true);
-            setShowNewMessage(false);
+            setNewMessage("");
           }}
         >
           <MessageCircleQuestion size={32} />
@@ -52,11 +51,19 @@ export function ChatBot(): React.ReactElement {
           <div className="chat-title">QUESTION?</div>
         </div>
         <div id="chat-messages">
-          {messages.map((message) => {
+          {messages.map((message, index) => {
             if (message.user === "user") {
-              return <div className="user-message message">{message.body}</div>;
+              return (
+                <div className="user-message message" key={index}>
+                  {message.body}
+                </div>
+              );
             } else {
-              return <div className="bot-message message">{message.body}</div>;
+              return (
+                <div className="bot-message message" key={index}>
+                  {message.body}
+                </div>
+              );
             }
           })}
         </div>
@@ -65,20 +72,26 @@ export function ChatBot(): React.ReactElement {
             className="send-input"
             type="text-box"
             placeholder="Ask a question..."
-            value={newMessage}
+            value={messageInput}
             onInput={(event) => {
-              setNewMessage(event.currentTarget.value);
+              setMessageInput(event.currentTarget.value);
             }}
           />
           <div
             className="send-icon"
-            onClick={() => {
-              setMessages([...messages, { user: "user", body: newMessage }]);
-              setNewMessage("");
-              //TODO: Find a free API to use for this. Or link it to zapier to actually text me.
-              //send new message to chatBot and populate response.
-              //toggle new message state.
-              //when bot replies call scrollToBottom();
+            onClick={async () => {
+              setMessageInput("");
+              const response = await askJarvis(messageInput);
+              setMessages([
+                ...messages,
+                { user: "user", body: messageInput },
+                {
+                  user: "bot",
+                  body: response,
+                },
+              ]);
+
+              setNewMessage(response);
             }}
           >
             <SendHorizontal size={32} />
@@ -95,4 +108,35 @@ function scrollToBottom() {
     return;
   }
   messageElement.scrollTop = messageElement.scrollHeight;
+}
+
+async function askJarvis(message: string) {
+  const response = await fetch(import.meta.env.VITE_API_URL + "/askJarvis", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ question: message }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`response ${response.status}`);
+  }
+
+  const data = await response.json();
+
+  const responseBody =
+    response.ok &&
+    isValidShape(
+      data,
+      defineShape({
+        message: "",
+      })
+    )
+      ? data.message
+      : undefined;
+
+  return responseBody
+    ? responseBody
+    : "I'm sorry I cannot process your message at this time. Try again later.";
 }

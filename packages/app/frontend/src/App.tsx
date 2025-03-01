@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { Routes } from "./main";
 import { Menu, MountainSnow, X } from "lucide-react";
 import { useState } from "react";
-/* import { ChatBot } from "./elements/chat-bot/chat-bot"; */
+import { ChatBot } from "./elements/chat-bot/chat-bot";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +57,7 @@ function App() {
 
       <Outlet />
 
-      {/* <ChatBot /> */}
+      <ChatBot />
 
       <footer>
         <p>© Copyright {new Date().getFullYear()}</p>

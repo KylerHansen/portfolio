@@ -3,7 +3,7 @@
     /* See https://aka.ms/tsconfig*/
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "ESNext",
+    "target": "ES2022",
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "jsx": "react-jsx",
@@ -13,8 +13,8 @@
     "noUnusedParameters": false,
     "forceConsistentCasingInFileNames": true,
 
-    "moduleResolution": "nodenext",
-    "module": "NodeNext",
+    "moduleResolution": "node",
+    "module": "ES2022",
     "outDir": "./dist/",
     "sourceMap": true,
     "composite": true,

@@ -5,4 +5,13 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/portfolio/",
+  envDir: "./config/",
+  optimizeDeps: {
+    esbuildOptions: {
+      target: "ES2022",
+    },
+  },
+  build: {
+    target: "ES2022",
+  },
 });

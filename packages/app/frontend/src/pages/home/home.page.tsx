@@ -54,6 +54,7 @@ export function Home() {
   return (
     <div className="home-page">
       <div
+        title="Fun fact, this banner image changes with the seasons!"
         className="banner"
         style={{ backgroundImage: `url(${imageBanner})` }}
       ></div>

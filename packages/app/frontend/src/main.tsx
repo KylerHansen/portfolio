@@ -1,12 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
+import App from "./App";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Home } from "./pages/home/home.page.tsx";
-import { Blog } from "./pages/blog.page.tsx";
-import { Projects } from "./pages/projects/projects.page.tsx";
-import { About } from "./pages/about.page.tsx";
+import { Home } from "./pages/home/home.page";
+import { Blog } from "./pages/blog.page";
+import { Projects } from "./pages/projects/projects.page";
+import { About } from "./pages/about.page";
 
 /**
  * If updating this, also update App.tsx

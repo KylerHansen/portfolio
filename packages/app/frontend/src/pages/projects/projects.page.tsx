@@ -83,7 +83,7 @@ export function Projects() {
     {
       title: "Custom Ringtone",
       description:
-        "Created a call center feature that allowed users to set a custom ringtone for their user account. This improved employee morale and was my hackathon project",
+        "Created a call center feature that allowed users to set a custom ringtone for their user account. This improved employee morale and was my hack-athon project",
       image: defaultCodingPic,
       keywords: [
         ProjectKeywords.Typescript,

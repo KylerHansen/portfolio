@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 packages/app/backend/.env
+packages/app/frontend/config
 
 packages/app/frontend/node_modules
 packages/app/backend/node_modules
