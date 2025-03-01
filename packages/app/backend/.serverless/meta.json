@@ -109,7 +109,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-us-west-2-dbc2ff16-7ec6",
-                  "S3Key": "serverless/express-lambda/production/1740787059914-2025-02-28T23:57:39.914Z/express-lambda.zip"
+                  "S3Key": "serverless/express-lambda/production/1740850438437-2025-03-01T17:33:58.437Z/express-lambda.zip"
                 },
                 "Handler": "dist/server.handler",
                 "Runtime": "nodejs18.x",
@@ -132,14 +132,14 @@
                 "ServerLogGroup"
               ]
             },
-            "ServerLambdaVersionFLFt0LwyryAhNyqyohjv83u4aU0Tsm1Eigo1FWmRbc": {
+            "ServerLambdaVersiontyjmbq064fODb9VigXYrJo0FG57RptioKcst4hXfPMo": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "ServerLambdaFunction"
                 },
-                "CodeSha256": "7jwKtM5MVeorpVVYWRUI+vjNjGSIS3/CMWa8hYwjJYw="
+                "CodeSha256": "3wKmGm0xaDVaLZp59mw1J3Ief529e2dCdWZoBoB9IY4="
               }
             },
             "ApiGatewayRestApi": {
@@ -366,7 +366,7 @@
                 "ServerLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1740787052818": {
+            "ApiGatewayDeployment1740850429477": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -429,7 +429,7 @@
             "ServerLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "ServerLambdaVersionFLFt0LwyryAhNyqyohjv83u4aU0Tsm1Eigo1FWmRbc"
+                "Ref": "ServerLambdaVersiontyjmbq064fODb9VigXYrJo0FG57RptioKcst4hXfPMo"
               },
               "Export": {
                 "Name": "sls-express-lambda-production-ServerLambdaFunctionQualifiedArn"
@@ -528,7 +528,7 @@
           "timeout": 10,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "ServerLambdaVersionFLFt0LwyryAhNyqyohjv83u4aU0Tsm1Eigo1FWmRbc"
+          "versionLogicalId": "ServerLambdaVersiontyjmbq064fODb9VigXYrJo0FG57RptioKcst4hXfPMo"
         }
       },
       "package": {
@@ -538,6 +538,87 @@
           "node_modules/**",
           "dist/**",
           "dist/server.js",
+          "../../../node_modules/@google/generative-ai/package.json",
+          "../../../node_modules/@google/generative-ai/README.md",
+          "../../../node_modules/@google/generative-ai/LICENSE",
+          "../../../node_modules/@google/generative-ai/server/package.json",
+          "../../../node_modules/@google/generative-ai/dist/tsdoc-metadata.json",
+          "../../../node_modules/@google/generative-ai/dist/index.mjs.map",
+          "../../../node_modules/@google/generative-ai/dist/index.mjs",
+          "../../../node_modules/@google/generative-ai/dist/index.js.map",
+          "../../../node_modules/@google/generative-ai/dist/index.js",
+          "../../../node_modules/@google/generative-ai/dist/generative-ai.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/search-grounding.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/responses.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/requests.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/index.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/function-calling.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/enums.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/content.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/server/shared.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/server/index.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/server/files.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/types/server/caching.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/index.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/gen-ai.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/errors.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/server/request.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/server/index.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/server/file-manager.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/server/constants.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/server/cache-manager.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/requests/stream-reader.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/requests/response-helpers.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/requests/request.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/requests/request-helpers.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/models/generative-model.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/methods/generate-content.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/methods/embed-content.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/methods/count-tokens.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/methods/chat-session.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/src/methods/chat-session-helpers.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/server.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/index.mjs.map",
+          "../../../node_modules/@google/generative-ai/dist/server/index.mjs",
+          "../../../node_modules/@google/generative-ai/dist/server/index.js.map",
+          "../../../node_modules/@google/generative-ai/dist/server/index.js",
+          "../../../node_modules/@google/generative-ai/dist/server/types/search-grounding.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/responses.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/requests.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/index.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/function-calling.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/enums.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/content.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/server/shared.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/server/index.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/server/files.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/types/server/caching.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/index.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/gen-ai.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/errors.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/server/request.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/server/index.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/server/file-manager.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/server/constants.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/server/cache-manager.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/requests/stream-reader.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/requests/response-helpers.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/requests/request.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/requests/request-helpers.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/models/generative-model.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/methods/generate-content.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/methods/embed-content.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/methods/count-tokens.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/methods/chat-session.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/src/methods/chat-session-helpers.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/scripts/run-format.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/scripts/license.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/scripts/format-patterns.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/server/scripts/check-format.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/scripts/run-format.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/scripts/license.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/scripts/format-patterns.d.ts",
+          "../../../node_modules/@google/generative-ai/dist/scripts/check-format.d.ts",
           "../../../node_modules/serverless-http/serverless-http.js",
           "../../../node_modules/serverless-http/serverless-http.d.ts",
           "../../../node_modules/serverless-http/package.json",
@@ -1194,7 +1275,7 @@
         "artifactsS3KeyDirname": "serverless/express-lambda/production/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-west-2-dbc2ff16-7ec6",
         "artifact": "/home/kuya/personal-projects/portfolio/packages/app/backend/.serverless/express-lambda.zip",
-        "artifactDirectoryName": "serverless/express-lambda/production/1740787059914-2025-02-28T23:57:39.914Z"
+        "artifactDirectoryName": "serverless/express-lambda/production/1740850438437-2025-03-01T17:33:58.437Z"
       }
     },
     "provider": {
@@ -1301,7 +1382,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-west-2-dbc2ff16-7ec6",
-                "S3Key": "serverless/express-lambda/production/1740787059914-2025-02-28T23:57:39.914Z/express-lambda.zip"
+                "S3Key": "serverless/express-lambda/production/1740850438437-2025-03-01T17:33:58.437Z/express-lambda.zip"
               },
               "Handler": "dist/server.handler",
               "Runtime": "nodejs18.x",
@@ -1324,14 +1405,14 @@
               "ServerLogGroup"
             ]
           },
-          "ServerLambdaVersionFLFt0LwyryAhNyqyohjv83u4aU0Tsm1Eigo1FWmRbc": {
+          "ServerLambdaVersiontyjmbq064fODb9VigXYrJo0FG57RptioKcst4hXfPMo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ServerLambdaFunction"
               },
-              "CodeSha256": "7jwKtM5MVeorpVVYWRUI+vjNjGSIS3/CMWa8hYwjJYw="
+              "CodeSha256": "3wKmGm0xaDVaLZp59mw1J3Ief529e2dCdWZoBoB9IY4="
             }
           },
           "ApiGatewayRestApi": {
@@ -1558,7 +1639,7 @@
               "ServerLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1740787052818": {
+          "ApiGatewayDeployment1740850429477": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1621,7 +1702,7 @@
           "ServerLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ServerLambdaVersionFLFt0LwyryAhNyqyohjv83u4aU0Tsm1Eigo1FWmRbc"
+              "Ref": "ServerLambdaVersiontyjmbq064fODb9VigXYrJo0FG57RptioKcst4hXfPMo"
             },
             "Export": {
               "Name": "sls-express-lambda-production-ServerLambdaFunctionQualifiedArn"
@@ -1796,7 +1877,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-us-west-2-dbc2ff16-7ec6",
-              "S3Key": "serverless/express-lambda/production/1740787059914-2025-02-28T23:57:39.914Z/express-lambda.zip"
+              "S3Key": "serverless/express-lambda/production/1740850438437-2025-03-01T17:33:58.437Z/express-lambda.zip"
             },
             "Handler": "dist/server.handler",
             "Runtime": "nodejs18.x",
@@ -1819,14 +1900,14 @@
             "ServerLogGroup"
           ]
         },
-        "ServerLambdaVersionFLFt0LwyryAhNyqyohjv83u4aU0Tsm1Eigo1FWmRbc": {
+        "ServerLambdaVersiontyjmbq064fODb9VigXYrJo0FG57RptioKcst4hXfPMo": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "ServerLambdaFunction"
             },
-            "CodeSha256": "7jwKtM5MVeorpVVYWRUI+vjNjGSIS3/CMWa8hYwjJYw="
+            "CodeSha256": "3wKmGm0xaDVaLZp59mw1J3Ief529e2dCdWZoBoB9IY4="
           }
         },
         "ApiGatewayRestApi": {
@@ -2053,7 +2134,7 @@
             "ServerLambdaPermissionApiGateway"
           ]
         },
-        "ApiGatewayDeployment1740787052818": {
+        "ApiGatewayDeployment1740850429477": {
           "Type": "AWS::ApiGateway::Deployment",
           "Properties": {
             "RestApiId": {
@@ -2116,7 +2197,7 @@
         "ServerLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "ServerLambdaVersionFLFt0LwyryAhNyqyohjv83u4aU0Tsm1Eigo1FWmRbc"
+            "Ref": "ServerLambdaVersiontyjmbq064fODb9VigXYrJo0FG57RptioKcst4hXfPMo"
           },
           "Export": {
             "Name": "sls-express-lambda-production-ServerLambdaFunctionQualifiedArn"
