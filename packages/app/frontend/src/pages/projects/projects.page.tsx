@@ -1,10 +1,6 @@
 import { useState } from "react";
 import "./projects.css";
 import { X } from "lucide-react";
-import attendance from "../../assets/attendance.png";
-import mahjong from "../../assets/mahjong.png";
-import textMyWaiter from "../../assets/text-my-waiter-logo.png";
-import defaultCodingPic from "../../assets/coding.jpg";
 
 export function Projects() {
   const [appliedFilters, setAppliedFilter] = useState<ProjectKeywords[]>([]);
@@ -30,6 +26,8 @@ export function Projects() {
     LitHtml = "Lit-Html",
   }
 
+  const defaultCodingPic = "assets/coding.jpg";
+
   const projects: ReadonlyArray<{
     title: string;
     description: string;
@@ -40,7 +38,7 @@ export function Projects() {
       title: "Attendance Counter",
       description:
         "This is a native android app I made for counting and graphing attendance.",
-      image: attendance,
+      image: "assets/attendance.png",
       keywords: [
         ProjectKeywords.Java,
         ProjectKeywords.Android,
@@ -51,7 +49,7 @@ export function Projects() {
       title: "Text My Waiter",
       description:
         "I created this mobile app as a way for customers to text their waiter.",
-      image: textMyWaiter,
+      image: "assets/text-my-waiter-logo.png",
       keywords: [
         ProjectKeywords.React,
         ProjectKeywords.Firebase,
@@ -63,7 +61,7 @@ export function Projects() {
     {
       title: "Mahjong",
       description: "This is a game I made as part of a java class project.",
-      image: mahjong,
+      image: "assets/mahjong.png",
       keywords: [ProjectKeywords.Java, ProjectKeywords.School],
     },
     {
