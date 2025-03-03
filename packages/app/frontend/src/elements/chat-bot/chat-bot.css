@@ -61,7 +61,6 @@
   padding: 20px;
   font-size: 16px;
   height: 12px;
-
   @container (max-width: 768px) {
     border-radius: 0;
   }
@@ -82,6 +81,8 @@
 #chat-messages {
   padding: 12px;
   height: 100%;
+  max-width: 95%;
+  box-sizing: border-box;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -109,6 +110,8 @@
 }
 
 .chat-sender {
+  max-width: 95%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   padding: 12px;
