@@ -1,22 +1,7 @@
 import { BicepsFlexed, HeartHandshake, Scale, Sprout } from "lucide-react";
 import "./home.css";
-import { useEffect, useState } from "react";
 
 export function Home() {
-  const [imageBanner, setImageUrl] = useState("");
-
-  const seasonImages = {
-    winter: "assets/summerBanner.png",
-    spring: "assets/springBanner.png",
-    summer: "assets/summerBanner.png",
-    fall: "assets/fallBanner.png",
-  };
-
-  useEffect(() => {
-    const currentMonth = new Date().getMonth();
-    setImageUrl(seasonImages[getSeason(currentMonth)]);
-  }, []);
-
   const coreValues: ReadonlyArray<{
     icon: JSX.Element;
     title: string;
@@ -51,9 +36,8 @@ export function Home() {
   return (
     <div className="home-page">
       <div
-        title="Fun fact, this banner image changes with the seasons!"
         className="banner"
-        style={{ backgroundImage: `url(${imageBanner})` }}
+        style={{ backgroundImage: `url("assets/summerBanner.png")` }}
       ></div>
       <div className="banner-text">
         <div className="title">KYLER HANSEN</div>
@@ -155,16 +139,4 @@ export function Home() {
       </div>
     </div>
   );
-}
-
-function getSeason(month: number): "winter" | "spring" | "summer" | "fall" {
-  if (month === 0 || month === 11 || month === 1) {
-    return "winter";
-  } else if (month === 2 || month === 3 || month === 4) {
-    return "spring";
-  } else if (month === 5 || month === 6 || month === 7) {
-    return "summer";
-  } else {
-    return "fall";
-  }
 }

@@ -111,6 +111,8 @@ function scrollToBottom() {
 }
 
 async function askJarvis(message: string) {
+  console.log("meta.env", JSON.stringify(import.meta.env));
+
   const response = await fetch(import.meta.env.VITE_API_URL + "/askJarvis", {
     method: "POST",
     headers: {
