@@ -6,7 +6,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const allowedOrigin = {
   development: ["http://localhost:5173/portfolio/"],
-  production: ["https://kylerhansen.github.io/portfolio/"],
+  production: ["https://kylerhansen.github.io"],
 };
 
 export enum HttpStatusCode {
