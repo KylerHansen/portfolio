@@ -3,9 +3,7 @@ self.addEventListener("install", function (event) {
 });
 
 const preLoad = function () {
-  console.log("Installing web app");
   return caches.open("offline").then(function (cache) {
-    console.log("caching index and important routes");
     return cache.addAll([
       "/portfolio/",
       "/portfolio/blog",
@@ -40,7 +38,6 @@ const checkResponse = function (request) {
 const addToCache = function (request) {
   return caches.open("offline").then(function (cache) {
     return fetch(request).then(function (response) {
-      console.log(response.url + " was cached");
       return cache.put(request, response);
     });
   });
