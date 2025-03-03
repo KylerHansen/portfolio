@@ -10,7 +10,7 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "assets/appIcon.svg",
+      "src": "appIcon.svg",
       "sizes": "1024x1024"
     }
   ]
