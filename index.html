@@ -3,7 +3,7 @@
   <head>
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-9CBTBKNR4X"
+      src="https://www.googletagmanager.com/gtag/js?id=G-RLYJBTMKX8"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -12,11 +12,12 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-9CBTBKNR4X");
+      gtag("config", "G-RLYJBTMKX8");
     </script>
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/portfolio/assets/favicon-BzP-1w7H.svg" />
+    <link rel="manifest" href="/portfolio/assets/manifest-DB_qC5iV.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kyler Hansen Portfolio</title>
 
@@ -42,11 +43,23 @@
         }
       })(window.location);
     </script>
-    <script type="module" crossorigin src="/portfolio/assets/index-eOzApCDV.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-yztE1r8D.css">
+    <script type="module" crossorigin src="/portfolio/assets/index-E5SzZAzf.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-CFeaUkhN.css">
   </head>
 
   <body style="margin-left: 0px; margin-right: 0px">
     <div id="root"></div>
+    <script>
+      /*This adds the service worker for caching pages on the progressive web app*/
+      if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker
+          .register("/portfolio/service-worker.js")
+          .then(function (reg) {
+            console.log(
+              "Service worker has been registered for scope: " + reg.scope
+            );
+          });
+      }
+    </script>
   </body>
 </html>

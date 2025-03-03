@@ -1,0 +1,17 @@
+{
+  "name": "Kyler's Portfolio",
+  "short_name": "KylerPortfolio",
+  "theme_color": "#273329",
+  "background_color": "#273329",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "https://kylerhansen.github.io/portfolio/",
+  "description": "Portfolio and Blog for Kyler Hansen",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "src/assets/appIcon.svg",
+      "sizes": "1024x1024"
+    }
+  ]
+}
