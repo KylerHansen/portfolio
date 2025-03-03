@@ -12,7 +12,7 @@
     {
       "src": "appIcon.svg",
       "sizes": "1024x1024",
-      "purpose": "maskable"
+      "purpose": "unmaskable"
     }
   ]
 }
