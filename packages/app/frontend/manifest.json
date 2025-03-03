@@ -11,8 +11,7 @@
   "icons": [
     {
       "src": "appIcon.svg",
-      "sizes": "1024x1024",
-      "purpose": "unmaskable"
+      "sizes": "1024x1024"
     }
   ]
 }
