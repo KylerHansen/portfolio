@@ -3,14 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "test:types": "tsc -b --pretty",
     "dev": "tsc -b && serverless offline start",
     "deploy": "tsc -b && serverless deploy --stage production --aws-profile aws-kyler",
     "clean": "rm -rf node_modules && rm -rf dist && npm i && npx tsc --build"
   },
   "dependencies": {
+    "@augment-vir/test": "^31.9.4",
     "@google/generative-ai": "^0.22.0",
+    "@portfolio/common": "*",
+    "chai": "^5.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",

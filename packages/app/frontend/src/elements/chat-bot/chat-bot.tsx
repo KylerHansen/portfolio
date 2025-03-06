@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import * as React from "react";
 import "./chat-bot.css";
 import { MessageCircleQuestion, SendHorizontal, X } from "lucide-react";
-import { defineShape, isValidShape } from "object-shape-tester";
+import { AskJarvisResponse } from "@portfolio/common/src/shared-endpoints";
 
 export function ChatBot(): React.ReactElement {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,18 +123,9 @@ async function askJarvis(message: string) {
     throw new Error(`response ${response.status}`);
   }
 
-  const data = await response.json();
+  const data: AskJarvisResponse = await response.json();
 
-  const responseBody =
-    response.ok &&
-    isValidShape(
-      data,
-      defineShape({
-        message: "",
-      })
-    )
-      ? data.message
-      : undefined;
+  const responseBody = response.ok ? data.message : undefined;
 
   return responseBody
     ? responseBody

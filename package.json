@@ -6,7 +6,8 @@
   "type": "module",
   "workspaces": [
     "packages/app/backend",
-    "packages/app/frontend"
+    "packages/app/frontend",
+    "packages/common"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

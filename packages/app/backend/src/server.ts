@@ -3,17 +3,16 @@ import dotenv from "dotenv";
 import cors, { CorsOptions } from "cors";
 import serverless from "serverless-http";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import {
+  AskJarvisResponse,
+  HttpStatusCode,
+} from "@portfolio/common/src/shared-endpoints";
+import { isValidAskJarvisRequest } from "./validators/ask-jarvis-request";
 
 const allowedOrigin = {
   development: ["http://localhost:5173/portfolio/"],
   production: ["https://kylerhansen.github.io"],
 };
-
-export enum HttpStatusCode {
-  Ok = 200,
-  BadRequest = 400,
-  GenericServerError = 500,
-}
 
 dotenv.config();
 
@@ -38,7 +37,7 @@ app.get("/health", (req: Request, res: Response) => {
 app.post("/askJarvis", async (req: Request, res: Response) => {
   const requestBody = req.body;
 
-  if (requestBody.question === undefined) {
+  if (!isValidAskJarvisRequest(requestBody)) {
     res.sendStatus(HttpStatusCode.BadRequest);
     throw new Error("Invalid request");
   }
@@ -55,7 +54,9 @@ app.post("/askJarvis", async (req: Request, res: Response) => {
 
   const result = await model.generateContent(prompt + requestBody.question);
 
-  res.status(HttpStatusCode.Ok).json({ message: result.response.text() });
+  const responseBody: AskJarvisResponse = { message: result.response.text() };
+
+  res.status(HttpStatusCode.Ok).json(responseBody);
 });
 
 export const handler = serverless(app);
