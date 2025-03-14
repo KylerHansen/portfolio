@@ -14,10 +14,10 @@ function App() {
         <Link to={Routes.Home}>HOME</Link>
         {" | "}
         <Link to={Routes.Projects}>PROJECTS</Link>
-        {" | "}
+        {/* {" | "}
         <Link to={Routes.About}>ABOUT</Link>
         {" | "}
-        <Link to={Routes.Blog}>BLOG</Link>
+        <Link to={Routes.Blog}>BLOG</Link> */}
       </nav>
 
       {!isOpen ? (
@@ -44,12 +44,12 @@ function App() {
           <Link to={Routes.Projects} onClick={() => setIsOpen(false)}>
             PROJECTS
           </Link>
-          <Link to={Routes.About} onClick={() => setIsOpen(false)}>
+          {/* <Link to={Routes.About} onClick={() => setIsOpen(false)}>
             ABOUT
           </Link>
           <Link to={Routes.Blog} onClick={() => setIsOpen(false)}>
             BLOG
-          </Link>
+          </Link> */}
         </div>
       ) : (
         <></>

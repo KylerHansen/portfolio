@@ -29,6 +29,7 @@ a {
   color: var(--background-light);
   text-decoration: none;
   font-weight: 200;
+  width: 100px;
 }
 
 a:hover {

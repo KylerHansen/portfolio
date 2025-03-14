@@ -28,18 +28,18 @@ const router = createBrowserRouter([
         path: Routes.Home,
         element: <Home />,
       },
-      {
+      /*  {
         path: Routes.Blog,
         element: <Blog />,
-      },
+      }, */
       {
         path: Routes.Projects,
         element: <Projects />,
       },
-      {
+      /*    {
         path: Routes.About,
         element: <About />,
-      },
+      }, */
     ],
   },
 ]);
