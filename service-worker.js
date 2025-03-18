@@ -6,9 +6,9 @@ const preLoad = function () {
   return caches.open("offline").then(function (cache) {
     return cache.addAll([
       "/portfolio/",
-      "/portfolio/blog",
+      /*   "/portfolio/blog", */
       "/portfolio/projects",
-      "/portfolio/about",
+      "/portfolio/interview",
       "/portfolio/offline.html",
     ]);
   });
