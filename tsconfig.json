@@ -12,7 +12,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "forceConsistentCasingInFileNames": true,
-
     "moduleResolution": "node",
     "module": "ES2022",
     "outDir": "./dist/",
@@ -23,5 +22,3 @@
   "exclude": ["node_modules", "./dist/", "**/node_modules"],
   "include": ["declaration.d.ts"]
 }
-
-//fix this to ignore node_modules

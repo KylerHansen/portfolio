@@ -4,18 +4,17 @@ import "./index.css";
 import App from "./App";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/home/home.page";
-import { Blog } from "./pages/blog.page";
 import { Projects } from "./pages/projects/projects.page";
-import { About } from "./pages/about.page";
+import { Interview } from "./pages/interview/interview.page";
 
 /**
- * If updating this, also update App.tsx
+ * If updating this, also update App.tsx and service-worker.js
  */
 export enum Routes {
   Home = "/portfolio/",
   Blog = "/portfolio/blog",
   Projects = "/portfolio/projects",
-  About = "/portfolio/about",
+  Interview = "/portfolio/interview",
 }
 
 const router = createBrowserRouter([
@@ -36,10 +35,10 @@ const router = createBrowserRouter([
         path: Routes.Projects,
         element: <Projects />,
       },
-      /*    {
-        path: Routes.About,
-        element: <About />,
-      }, */
+      {
+        path: Routes.Interview,
+        element: <Interview />,
+      },
     ],
   },
 ]);

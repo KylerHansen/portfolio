@@ -15,7 +15,7 @@ nav {
   width: 100%;
   font-size: 14px;
   position: sticky;
-  top: -1px;
+  top: 0px;
   background-color: var(--background-dark);
 }
 
@@ -43,10 +43,9 @@ footer {
 
 .mobile-nav {
   display: flex;
-  padding: 60px 20px 20px 20px;
-  justify-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: var(--background-dark-transparent);
   position: fixed;
   width: 100%;

@@ -14,9 +14,9 @@ function App() {
         <Link to={Routes.Home}>HOME</Link>
         {" | "}
         <Link to={Routes.Projects}>PROJECTS</Link>
-        {/* {" | "}
-        <Link to={Routes.About}>ABOUT</Link>
         {" | "}
+        <Link to={Routes.Interview}>INTERVIEW</Link>
+        {/*{" | "}
         <Link to={Routes.Blog}>BLOG</Link> */}
       </nav>
 
@@ -44,10 +44,10 @@ function App() {
           <Link to={Routes.Projects} onClick={() => setIsOpen(false)}>
             PROJECTS
           </Link>
-          {/* <Link to={Routes.About} onClick={() => setIsOpen(false)}>
-            ABOUT
+          <Link to={Routes.Interview} onClick={() => setIsOpen(false)}>
+            INTERVIEW
           </Link>
-          <Link to={Routes.Blog} onClick={() => setIsOpen(false)}>
+          {/*<Link to={Routes.Blog} onClick={() => setIsOpen(false)}>
             BLOG
           </Link> */}
         </div>

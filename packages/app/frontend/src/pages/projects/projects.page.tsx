@@ -127,7 +127,7 @@ export function Projects() {
 
   return (
     <div className="project-page">
-      <h1>Projects</h1>
+      <h1>PROJECTS</h1>
       <div className="filters">
         {Object.values(ProjectKeywords).map((filter, index) => {
           if (appliedFilters.includes(filter)) {

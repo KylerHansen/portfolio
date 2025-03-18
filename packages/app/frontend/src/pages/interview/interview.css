@@ -1,0 +1,56 @@
+.interview-page {
+  color: var(--primary-color);
+  background-color: var(--background-light);
+  padding: 20px;
+}
+
+.interview-questions {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-self: center;
+  max-width: 800px;
+  gap: 20px;
+
+  @container (width < 762px) {
+    gap: 40px;
+  }
+}
+
+.question-container {
+  padding: 12px;
+  height: 33px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+
+  @container (width < 762px) {
+    height: 45px;
+    padding: 20px;
+  }
+}
+.question-container:hover {
+  background-color: var(--primary-color);
+  color: var(--background-light);
+}
+
+.question {
+  text-align: left;
+}
+
+.answer {
+  overflow: hidden;
+  color: var(--background-dark);
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.answer.open {
+  max-height: 500px;
+  overflow-y: auto;
+}
