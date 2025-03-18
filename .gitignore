@@ -25,10 +25,13 @@ dist-ssr
 *.tsbuildinfo
 
 
-packages/app/backend/.env
 packages/app/frontend/config
-
+packages/app/frontend/tsconfig.tsbuildinfo
 packages/app/frontend/node_modules
+
 packages/app/backend/node_modules
+packages/app/backend/.env
+
+
 packages/common/node_modules
 
