@@ -53,4 +53,5 @@
 .answer.open {
   max-height: 500px;
   overflow-y: auto;
+  transition: max-height 0.3s ease-in;
 }

@@ -1,8 +1,13 @@
+import { useEffect, useState } from "react";
 import "./interview.css";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export function Interview() {
-  //TODO: CONSIDER ADDING A VIDEO PLAYER THAT CHANGES TO A DIFFERENT VIDEO WHEN SELECTING AN INTERVIEW QUESTION.
+  const [openedQuestions, setOpenedQuestions] = useState<Array<number>>([]);
+
+  useEffect(() => {
+    console.log("openedQuestions", openedQuestions);
+  }, [openedQuestions]);
 
   const interviewQuestions: ReadonlyArray<{
     question: string;
@@ -52,7 +57,7 @@ export function Interview() {
     {
       question: "How would you describe your personality?",
       answer:
-        "I'm introverted, meaning I'm generally reserved and quiet. However, I enjoy getting to know people through sincere, deeper conversations. Most people would say they've never heard me raise my voice even on roller coasters or sporting events. I once scored as an ISFJ on the Myers-Briggs personality test, though one of the categories was a 50/50 split, so my result could shift by one letter if I took it again—but I don’t remember which one. ",
+        "I'm introverted, meaning I'm generally reserved and quiet. However, I enjoy getting to know people through sincere, deeper conversations. Most people would say they've never heard me raise my voice even on roller coasters or at sporting events. I once scored as an ISFJ on the Myers-Briggs personality test, though one of the categories was a 50/50 split, so my result could shift by one letter if I took it again—but I don’t remember which one. ",
     },
     {
       question: "What is a fun fact about you?",
@@ -62,7 +67,7 @@ export function Interview() {
     {
       question: "Do you speak a second language?",
       answer:
-        "Yes but I'm not as fluent as I once was. When I was 18, I lived in the Philippines for 2 years. There I learned the culture and became fluent in Tagalog and Hiligaynon, a local dialect specific to Iloilo.",
+        "Yes but I'm not as fluent as I once was. When I was 18, I ate and lived like a local in the Philippines for 2 years. There I learned the culture and became fluent in Tagalog and Hiligaynon, a local dialect specific to Iloilo.",
     },
   ];
 
@@ -80,18 +85,27 @@ export function Interview() {
               <div
                 className="question-container"
                 onClick={() => {
-                  const answerBox = document.getElementById(
-                    index.toString()
-                  ) as HTMLDivElement;
-                  answerBox.classList.toggle("open");
+                  setOpenedQuestions(
+                    openedQuestions.includes(index)
+                      ? openedQuestions.filter((item) => item != index)
+                      : [...openedQuestions, index]
+                  );
                 }}
               >
                 <div className="question">{prompt.question}</div>
                 <div className="drop-icon">
-                  <ChevronDown />
+                  {openedQuestions.includes(index) ? (
+                    <ChevronUp />
+                  ) : (
+                    <ChevronDown />
+                  )}
                 </div>
               </div>
-              <div id={index.toString()} className="answer">
+              <div
+                className={
+                  openedQuestions.includes(index) ? `answer open` : `answer`
+                }
+              >
                 <p>{prompt.answer} </p>
               </div>
             </div>
