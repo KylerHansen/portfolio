@@ -64,11 +64,6 @@ export function Interview() {
       answer:
         "I've been sky diving twice, and would definitely go again. I also want to go bungee jumping but haven't been yet.",
     },
-    {
-      question: "Do you speak a second language?",
-      answer:
-        "Yes but I'm not as fluent as I once was. When I was 18, I ate and lived like a local in the Philippines for 2 years. There I learned the culture and became fluent in Tagalog and Hiligaynon, a local dialect specific to Iloilo.",
-    },
   ];
 
   return (
