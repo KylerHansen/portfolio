@@ -62,3 +62,7 @@ footer {
 .mobile-nav a {
   font-weight: 200;
 }
+
+.clue-3 {
+  color: var(--background-dark);
+}

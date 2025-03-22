@@ -1,41 +1,20 @@
-import { BicepsFlexed, HeartHandshake, Scale, Sprout } from "lucide-react";
 import "./home.css";
+import { useState } from "react";
+import { CoreValues } from "../../elements/core-values/core-values";
 
 export function Home() {
-  const coreValues: ReadonlyArray<{
-    icon: JSX.Element;
-    title: string;
-    description: string;
-  }> = [
-    {
-      icon: <Scale color="var(--primary-color)" size={48} />,
-      title: "WORK LIFE BALANCE",
-      description:
-        "I prioritize quality time with my wife and kids while maintaining my physical and spiritual well-being.",
-    },
-    {
-      icon: <Sprout color="var(--primary-color)" size={48} />,
-      title: "CONTINUOUS GROWTH",
-      description:
-        "I strive to improve in my career, personal life, and relationships, always seeking to be better.",
-    },
-    {
-      icon: <HeartHandshake color="var(--primary-color)" size={48} />,
-      title: "SERVICE & ACHIEVEMENT",
-      description:
-        "I find fulfillment in helping others and ensuring that I accomplish something meaningful every day.",
-    },
-    {
-      icon: <BicepsFlexed color="var(--primary-color)" size={48} />,
-      title: "INTEGRITY & AUTHENTICITY",
-      description:
-        "I strive to be honest, reliable, and true to my values in all aspects of life, both personally and professionally.",
-    },
-  ];
+  const [bannerClickCount, setClickCount] = useState<number>(0);
 
   return (
     <div className="home-page">
       <div
+        onClick={() => {
+          setClickCount(bannerClickCount + 1);
+          if (bannerClickCount > 8) {
+            alert("You found clue #2. Your next clue is hidden in the footer.");
+            setClickCount(0);
+          }
+        }}
         className="banner"
         style={{ backgroundImage: `url("assets/summerBanner.png")` }}
       ></div>
@@ -121,20 +100,7 @@ export function Home() {
         </div>
 
         <div className="section">
-          <h1>CORE VALUES</h1>
-          <div className="core-values">
-            {coreValues.map((value, index) => {
-              return (
-                <div className="core-value-container" key={index}>
-                  {value.icon}
-                  <div className="core-value-title">{value.title}</div>
-                  <div className="core-value-description">
-                    {value.description}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <CoreValues />
         </div>
       </div>
     </div>

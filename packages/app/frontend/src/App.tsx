@@ -64,6 +64,10 @@ function App() {
         <a href="https://www.linkedin.com/in/kyler-hansen-a365991a5">
           LinkedIn
         </a>
+        <div className="clue-3">
+          Congratulations you found clue #3! Lets play a game. Starting from
+          left to right, click on each of the core value icons once to begin.
+        </div>
       </footer>
     </>
   );

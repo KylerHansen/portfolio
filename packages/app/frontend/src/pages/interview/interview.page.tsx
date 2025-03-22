@@ -64,6 +64,10 @@ export function Interview() {
       answer:
         "I've been sky diving twice, and would definitely go again. I also want to go bungee jumping but haven't been yet.",
     },
+    {
+      question: "Do you like scavenger hunts?",
+      answer: "Go to the home page and click the banner 10 times.",
+    },
   ];
 
   return (

@@ -44,34 +44,6 @@
   color: var(--text-dark);
 }
 
-.core-values {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 20px;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.core-value-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.core-value-title {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-.core-value-description {
-  margin-top: 10px;
-  text-align: center;
-  color: var(--text-dark);
-  width: 232px;
-  font-size: 16px;
-}
-
 .clifton-strengths {
   display: flex;
   flex-direction: row;
