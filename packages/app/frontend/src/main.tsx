@@ -7,6 +7,7 @@ import { Home } from "./pages/home/home.page";
 import { Projects } from "./pages/projects/projects.page";
 import { Interview } from "./pages/interview/interview.page";
 import { ScavengerHuntEnding } from "./pages/scavenger-hunt-ending/scavenger-hunt-ending";
+import { NotFound } from "./pages/not-found/not-found";
 
 /**
  * If updating this, also update App.tsx and service-worker.js
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
   {
     path: Routes.Home,
     element: <App />,
+    errorElement: <NotFound />,
     children: [
       {
         path: Routes.Home,

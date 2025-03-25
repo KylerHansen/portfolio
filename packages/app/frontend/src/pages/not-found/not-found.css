@@ -1,0 +1,5 @@
+.not-found-text {
+  display: flex;
+  justify-self: center;
+  max-width: 400px;
+}
