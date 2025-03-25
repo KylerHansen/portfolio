@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./projects.css";
-import { X } from "lucide-react";
+import { TreePine, X } from "lucide-react";
 
 export function Projects() {
   const [appliedFilters, setAppliedFilter] = useState<ProjectKeywords[]>([]);
@@ -26,14 +26,53 @@ export function Projects() {
     LitHtml = "Lit-Html",
   }
 
-  const defaultCodingPic = "assets/coding.jpg";
-
   const projects: ReadonlyArray<{
     title: string;
     description: string;
-    image: string;
+    image?: string;
     keywords: ProjectKeywords[];
   }> = [
+    {
+      title: "SMS & Chat Messaging",
+      description:
+        "Created a chat messaging system that allowed the call center users to respond to both website chat widgets and SMS messages for hundreds of companies.",
+      keywords: [
+        ProjectKeywords.Typescript,
+        ProjectKeywords.Twilio,
+        ProjectKeywords.AWS,
+        ProjectKeywords.HTML,
+        ProjectKeywords.CSS,
+        ProjectKeywords.Work,
+        ProjectKeywords.React,
+        ProjectKeywords.LitHtml,
+      ],
+    },
+    {
+      title: "Outbound dashboard",
+      description:
+        "Created a dashboard for the outbound team. This turned hundreds of excel spreadsheets into one convenient easy to use dashboard.",
+      keywords: [
+        ProjectKeywords.Typescript,
+        ProjectKeywords.HTML,
+        ProjectKeywords.CSS,
+        ProjectKeywords.Work,
+        ProjectKeywords.React,
+        ProjectKeywords.LitHtml,
+      ],
+    },
+    {
+      title: "Call Dashboard Overhaul UX/UI",
+      description:
+        "Completely redesigned the call dashboard to improve the user experience, increase efficiency, and reduce employee mistakes.",
+      keywords: [
+        ProjectKeywords.Typescript,
+        ProjectKeywords.HTML,
+        ProjectKeywords.CSS,
+        ProjectKeywords.Work,
+        ProjectKeywords.React,
+        ProjectKeywords.LitHtml,
+      ],
+    },
     {
       title: "Attendance Counter",
       description:
@@ -68,7 +107,6 @@ export function Projects() {
       title: "Johari",
       description:
         "One of my full stack senior projects, a psychology test called Johari Window.",
-      image: defaultCodingPic,
       keywords: [
         ProjectKeywords.Asp,
         ProjectKeywords.Csharp,
@@ -82,7 +120,6 @@ export function Projects() {
       title: "Custom Ringtone",
       description:
         "Created a call center feature that allowed users to set a custom ringtone for their user account. This improved employee morale and was my hack-athon project",
-      image: defaultCodingPic,
       keywords: [
         ProjectKeywords.Typescript,
         ProjectKeywords.Twilio,
@@ -94,14 +131,11 @@ export function Projects() {
       ],
     },
     {
-      title: "SMS Chat Messaging",
+      title: "Announcement Feature",
       description:
-        "Created a chat messaging feature that allowed the call center users to respond to both website chat widgets and SMS messages for hundreds of companies.",
-      image: defaultCodingPic,
+        "Created a way for executives to send out both internal and external announcements in their system.",
       keywords: [
         ProjectKeywords.Typescript,
-        ProjectKeywords.Twilio,
-        ProjectKeywords.AWS,
         ProjectKeywords.HTML,
         ProjectKeywords.CSS,
         ProjectKeywords.Work,
@@ -110,10 +144,9 @@ export function Projects() {
       ],
     },
     {
-      title: "Call Dashboard Overhaul UX/UI",
+      title: "Billing Legacy Code Refactor",
       description:
-        "Completely redesigned the call dashboard to improve the user experience, increase efficiency, and reduce employee mistakes.",
-      image: defaultCodingPic,
+        "I updated the legacy code to support billing for the chat system. I also changed the billing code to use Stripe usage based subscriptions for future scalability.",
       keywords: [
         ProjectKeywords.Typescript,
         ProjectKeywords.HTML,
@@ -174,7 +207,11 @@ export function Projects() {
           })
           .map((project, index) => (
             <div className="project-card" key={index}>
-              <img className="project-image" src={project.image} />
+              {project.image ? (
+                <img className="project-image" src={project.image} />
+              ) : (
+                <TreePine size={80} />
+              )}
               <div className="project-title">
                 {project.title.toLocaleUpperCase()}
               </div>
