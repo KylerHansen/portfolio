@@ -1,3 +1,4 @@
+import { Routes } from "../../main";
 import "./not-found.css";
 
 export function NotFound() {
@@ -9,6 +10,8 @@ export function NotFound() {
         The page you are looking for doesn't exist. This is your 404 not found
         error.
       </p>
+
+      <a href={Routes.Home}>Go back to home page</a>
     </div>
   );
 }
