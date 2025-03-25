@@ -94,6 +94,8 @@
 .message {
   padding: 12px;
   border-radius: var(--border-radius);
+  max-width: 80%;
+  overflow-wrap: break-word;
 }
 
 .bot-message {
