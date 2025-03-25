@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Home } from "./pages/home/home.page";
 import { Projects } from "./pages/projects/projects.page";
 import { Interview } from "./pages/interview/interview.page";
+import { ScavengerHuntEnding } from "./pages/scavenger-hunt-ending/scavenger-hunt-ending";
 
 /**
  * If updating this, also update App.tsx and service-worker.js
@@ -15,13 +16,13 @@ export enum Routes {
   Blog = "/portfolio/blog",
   Projects = "/portfolio/projects",
   Interview = "/portfolio/interview",
+  ScavengerHuntEnding = "/portfolio/4txzaq2l3i4y5vb",
 }
 
 const router = createBrowserRouter([
   {
     path: Routes.Home,
     element: <App />,
-
     children: [
       {
         path: Routes.Home,
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
         path: Routes.Interview,
         element: <Interview />,
       },
+      { path: Routes.ScavengerHuntEnding, element: <ScavengerHuntEnding /> },
     ],
   },
 ]);

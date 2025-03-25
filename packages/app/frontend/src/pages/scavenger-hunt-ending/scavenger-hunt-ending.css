@@ -1,0 +1,23 @@
+.ending-page {
+  color: var(--primary-color);
+  background-color: var(--background-light);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ending-statement {
+  max-width: 800px;
+  padding-bottom: 40px;
+}
+
+.se-sloth-image {
+  width: 200px;
+  height: 200px;
+}
+
+.name-list {
+  text-align: left;
+}
