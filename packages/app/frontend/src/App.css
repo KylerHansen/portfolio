@@ -65,4 +65,5 @@ footer {
 
 .clue-3 {
   color: var(--background-dark);
+  cursor: default;
 }
