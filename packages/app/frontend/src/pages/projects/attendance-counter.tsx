@@ -9,7 +9,7 @@ export function AttendanceCounter() {
         requirements={[
           "Must have a click counter.",
           "Must be able to store and organize each count.",
-          "Must be able to graph counts over a period of time.",
+          "Must be able to graph saved counts over a period of time.",
         ]}
         description="
         Inspiration for this project came as I asked my local church clerk how I could make him a better click counter. 

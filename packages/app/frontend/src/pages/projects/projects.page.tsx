@@ -1,14 +1,19 @@
 import { useState } from "react";
 import "./projects.css";
 import { TreePine, X } from "lucide-react";
+import { Routes } from "../../main";
 
 export function Projects() {
   const [appliedFilters, setAppliedFilter] = useState<ProjectKeywords[]>([]);
 
   enum ProjectKeywords {
     Typescript = "Typescript",
+    NodeJS = "NodeJS",
+    Express = "Express",
     Twilio = "Twilio",
+    Prisma = "Prisma",
     AWS = "AWS",
+    Graphql = "Graphql",
     HTML = "HTML",
     CSS = "CSS",
     React = "React",
@@ -24,60 +29,62 @@ export function Projects() {
     Work = "Work Projects",
     School = "School Projects",
     LitHtml = "Lit-Html",
+    Postgres = "Postgres",
+    Redis = "Redis",
+    Monorepo = "Monorepo",
+    Docker = "Docker",
   }
+
+  const JillsOfficeStack = [
+    ProjectKeywords.Typescript,
+    ProjectKeywords.NodeJS,
+    ProjectKeywords.Twilio,
+    ProjectKeywords.Express,
+    ProjectKeywords.AWS,
+    ProjectKeywords.HTML,
+    ProjectKeywords.CSS,
+    ProjectKeywords.Work,
+    ProjectKeywords.React,
+    ProjectKeywords.LitHtml,
+    ProjectKeywords.Graphql,
+    ProjectKeywords.Prisma,
+    ProjectKeywords.Postgres,
+    ProjectKeywords.Redis,
+    ProjectKeywords.Monorepo,
+    ProjectKeywords.Docker,
+  ];
 
   const projects: ReadonlyArray<{
     title: string;
     description: string;
-    image?: string;
     keywords: ProjectKeywords[];
+    link?: Routes;
+    image?: string;
   }> = [
     {
       title: "SMS & Chat Messaging",
       description:
         "Created a chat messaging system that allowed the call center users to respond to both website chat widgets and SMS messages for hundreds of companies.",
-      keywords: [
-        ProjectKeywords.Typescript,
-        ProjectKeywords.Twilio,
-        ProjectKeywords.AWS,
-        ProjectKeywords.HTML,
-        ProjectKeywords.CSS,
-        ProjectKeywords.Work,
-        ProjectKeywords.React,
-        ProjectKeywords.LitHtml,
-      ],
+      keywords: JillsOfficeStack,
     },
     {
       title: "Outbound dashboard",
       description:
         "Created a dashboard for the outbound team. This turned hundreds of excel spreadsheets into one convenient easy to use dashboard.",
-      keywords: [
-        ProjectKeywords.Typescript,
-        ProjectKeywords.HTML,
-        ProjectKeywords.CSS,
-        ProjectKeywords.Work,
-        ProjectKeywords.React,
-        ProjectKeywords.LitHtml,
-      ],
+      keywords: JillsOfficeStack,
     },
     {
       title: "Call Dashboard Overhaul UX/UI",
       description:
         "Completely redesigned the call dashboard to improve the user experience, increase efficiency, and reduce employee mistakes.",
-      keywords: [
-        ProjectKeywords.Typescript,
-        ProjectKeywords.HTML,
-        ProjectKeywords.CSS,
-        ProjectKeywords.Work,
-        ProjectKeywords.React,
-        ProjectKeywords.LitHtml,
-      ],
+      keywords: JillsOfficeStack,
     },
     {
       title: "Attendance Counter",
       description:
         "This is a native android app I made for counting and graphing attendance.",
       image: "assets/attendance.png",
+      link: Routes.AttendanceCounter,
       keywords: [
         ProjectKeywords.Java,
         ProjectKeywords.Android,
@@ -119,42 +126,20 @@ export function Projects() {
     {
       title: "Custom Ringtone",
       description:
-        "Created a call center feature that allowed users to set a custom ringtone for their user account. This improved employee morale and was my hack-athon project",
-      keywords: [
-        ProjectKeywords.Typescript,
-        ProjectKeywords.Twilio,
-        ProjectKeywords.AWS,
-        ProjectKeywords.HTML,
-        ProjectKeywords.CSS,
-        ProjectKeywords.Work,
-        ProjectKeywords.LitHtml,
-      ],
+        "Created a call center feature that allowed users to set a custom ringtone for their user account.",
+      keywords: JillsOfficeStack,
     },
     {
       title: "Announcement Feature",
       description:
         "Created a way for executives to send out both internal and external announcements in their system.",
-      keywords: [
-        ProjectKeywords.Typescript,
-        ProjectKeywords.HTML,
-        ProjectKeywords.CSS,
-        ProjectKeywords.Work,
-        ProjectKeywords.React,
-        ProjectKeywords.LitHtml,
-      ],
+      keywords: JillsOfficeStack,
     },
     {
       title: "Billing Legacy Code Refactor",
       description:
         "I updated the legacy code to support billing for the chat system. I also changed the billing code to use Stripe usage based subscriptions for future scalability.",
-      keywords: [
-        ProjectKeywords.Typescript,
-        ProjectKeywords.HTML,
-        ProjectKeywords.CSS,
-        ProjectKeywords.Work,
-        ProjectKeywords.React,
-        ProjectKeywords.LitHtml,
-      ],
+      keywords: JillsOfficeStack,
     },
   ];
 
@@ -206,7 +191,15 @@ export function Projects() {
             );
           })
           .map((project, index) => (
-            <div className="project-card" key={index}>
+            <div
+              className="project-card"
+              key={index}
+              onClick={() => {
+                if (!project.link) return;
+
+                window.location.href = project.link;
+              }}
+            >
               {project.image ? (
                 <img className="project-image" src={project.image} />
               ) : (

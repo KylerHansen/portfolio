@@ -30,5 +30,3 @@ export function ProjectDetails({
     </div>
   );
 }
-
-//WOULD BE FUN TO ADD AN EASTER EGG SCAVENGER HUNT IN THE PORTFOLIO.

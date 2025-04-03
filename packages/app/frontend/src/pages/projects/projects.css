@@ -65,6 +65,13 @@
   gap: 12px;
   width: 200px;
   align-items: center;
+  padding: 10px;
+  border: 2px solid var(--background-light);
+}
+
+.project-card:hover {
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
 }
 
 .project-image {
