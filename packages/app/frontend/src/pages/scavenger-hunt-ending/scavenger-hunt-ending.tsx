@@ -1,7 +1,7 @@
 import "./scavenger-hunt-ending.css";
 
 export function ScavengerHuntEnding() {
-  const namesList: Array<string> = ["Kyler", "Lex"];
+  const namesList: Array<string> = ["Kyler", "Lex", "Hailee"];
 
   return (
     <div className="ending-page">
