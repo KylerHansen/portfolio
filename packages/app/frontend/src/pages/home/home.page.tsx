@@ -22,7 +22,7 @@ export function Home() {
         <div className="title">KYLER HANSEN</div>
         <div className="subtitle">SOFTWARE DEVELOPER</div>
       </div>
-      <div className="card">
+      <div className="home-card">
         <div className="section">
           <h1>PURPOSE STATEMENT</h1>
           <div className="purpose-statement">

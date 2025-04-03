@@ -22,7 +22,7 @@
   font-size: 40px;
 }
 
-.card {
+.home-card {
   display: flex;
   background-color: var(--background-light);
   justify-self: center;
