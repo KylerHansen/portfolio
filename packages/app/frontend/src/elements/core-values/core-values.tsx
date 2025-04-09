@@ -45,6 +45,8 @@ export function CoreValues(): React.ReactElement {
   }
 
   async function coreValueIconClick(index: number) {
+    const numberOfRounds = 6;
+
     if (isGameRunning) {
       const playerIconPattern = [...clickedIcons, index];
 
@@ -56,7 +58,7 @@ export function CoreValues(): React.ReactElement {
       if (areArraysStrictlyEqual(playerIconPattern, computerIcons)) {
         setClickedIcons([]);
 
-        if (roundCount === 10) {
+        if (roundCount === numberOfRounds) {
           alert(
             `Winner! You completed clue #4. Put the answer to this riddle in the chat widget.
 
@@ -71,7 +73,11 @@ export function CoreValues(): React.ReactElement {
         await triggerDoubleBlink();
         await cpuTakesTurn();
       } else {
-        alert(`Game over, ${roundCount - 1} out of 10 rounds completed`);
+        alert(
+          `Game over, ${
+            roundCount - 1
+          } out of ${numberOfRounds} rounds completed`
+        );
         setClickedIcons([]);
 
         resetGameState();
