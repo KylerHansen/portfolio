@@ -192,7 +192,9 @@ export function Projects() {
           })
           .map((project, index) => (
             <div
-              className="project-card"
+              className={
+                project.link ? "project-card has-link" : "project-card"
+              }
               key={index}
               onClick={() => {
                 if (!project.link) return;
