@@ -24,17 +24,20 @@ export function Home() {
       </div>
       <div className="home-card">
         <div className="section">
-          <h1>PURPOSE STATEMENT</h1>
+          <h1 title="A purpose statement is a simple but powerful declaration of who you are and what drives you in your career. It captures your deepest values, strengths, and passions, serving as a guiding light that fuels your ambition and leads you toward meaningful impact and fulfillment.">
+            PURPOSE STATEMENT
+          </h1>
           <div className="purpose-statement">
-            I was created to use my talents of Execution, Imagination,
-            Compassion, to perform my passions of Advocating, Leading,
-            Analyzing, to accomplish my mission of Achievement by Producing Wins
-            and Recognition.
+            I use my talents of Execution, Imagination, Compassion, to perform
+            my passions of Advocating, Leading, Analyzing, to accomplish my
+            mission of Achievement by Producing Wins and Recognition.
           </div>
         </div>
 
         <div className="section">
-          <h1>CLIFTON STRENGTHS</h1>
+          <h1 title="CliftonStrengths is an assessment tool that reveals your top 5 natural talents, offering valuable insights into how you approach work, solve problems, and interact with others.">
+            CLIFTON STRENGTHS
+          </h1>
           <div className="clifton-strengths">
             <div
               onMouseOver={(event) => {

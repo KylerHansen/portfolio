@@ -99,30 +99,32 @@ export function CoreValues(): React.ReactElement {
       icon: <Scale color="var(--primary-color)" size={48} />,
       title: "WORK LIFE BALANCE",
       description:
-        "I prioritize quality time with my wife and kids while maintaining my physical and spiritual well-being.",
+        "Work-life balance means managing my time between work and personal life to avoid burnout, while nurturing relationships and prioritizing my physical, mental, and spiritual well-being.",
     },
     {
       icon: <Sprout color="var(--primary-color)" size={48} />,
       title: "CONTINUOUS GROWTH",
       description:
-        "I strive to improve in my career, personal life, and relationships, always seeking to be better.",
+        "Driven to improve myself in my career, personal life, and relationships, always seeking to be better.",
     },
     {
       icon: <HeartHandshake color="var(--primary-color)" size={48} />,
       title: "SERVICE & ACHIEVEMENT",
       description:
-        "I find fulfillment in helping others and ensuring that I accomplish something meaningful every day.",
+        "Finding fulfillment in helping others and ensuring that I accomplish something meaningful every day.",
     },
     {
       icon: <BicepsFlexed color="var(--primary-color)" size={48} />,
       title: "INTEGRITY & AUTHENTICITY",
       description:
-        "I strive to be honest, reliable, and true to my values in all aspects of life, both personally and professionally.",
+        "I am committed to being honest, reliable, and true to my values in all aspects of life, both personally and professionally.",
     },
   ];
   return (
     <div>
-      <h1>CORE VALUES</h1>
+      <h1 title="“Values are like fingerprints. Nobody's are the same, but you leave [them] all over everything you do.” – Elvis Presley">
+        CORE VALUES
+      </h1>
       <div className="core-values">
         {coreValues.map((value, index) => {
           return (
