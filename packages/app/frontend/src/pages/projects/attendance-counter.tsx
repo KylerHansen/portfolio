@@ -20,7 +20,7 @@ export function AttendanceCounter() {
         It was also easy to add historic data into the books. You could generate graphs or download .csv files to share the data with others via SMS or gmail.
         "
         stack="Java, Android studio"
-        imageUrls={[""]}
+        imageUrls={["attendance.png"]}
         result="I completed all the requirements and the minimum viable product (MVP) for this was completed. I did not publish this on the store because my church ended up releasing a feature in their app specific for clerk use that had internal reporting built into it. Effectively making this project obsolete."
       ></ProjectDetails>
     </div>
