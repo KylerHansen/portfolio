@@ -1,0 +1,9 @@
+.project-details-card {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
