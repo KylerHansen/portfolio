@@ -18,15 +18,40 @@ export function ProjectDetails({
   imageUrls: Array<string>;
   result: string;
 }): React.ReactElement {
+  const [imageIndex, setIndex] = React.useState(0);
+
   return (
-    <div>
-      <div className="title">{title}</div>
-      <div className="objective">{objective}</div>
-      <div className="description">{description}</div>
-      <div className="requirements">{requirements}</div> {/* Bulleted list */}
-      <div className="stack">{stack}</div>
-      <div className="url">{imageUrls}</div> {/* Gallery */}
-      <div className="result">{result}</div>
+    <div className="project-details-card">
+      <h1 className="title">{title.toUpperCase()}</h1>
+      <div className="project-slide-show-container">
+        <img
+          className="project-image"
+          /* TODO: GET SELECTED IMAGE URL */
+          src={"../assets/" + imageUrls[imageIndex]}
+          alt="Project Images"
+        />
+      </div>
+      <div className="objective">
+        <span className="project-detail-subtitle">OBJECTIVE:</span>
+        {objective}
+      </div>
+      <div className="description">
+        <span className="project-detail-subtitle">DESCRIPTION:</span>
+        {description}
+      </div>
+      <div className="requirements">
+        <span className="project-detail-subtitle">REQUIREMENTS:</span>
+        {requirements}
+      </div>
+      {/* Bulleted list */}
+      <div className="stack">
+        <span className="project-detail-subtitle">TOOLS:</span>
+        {stack}
+      </div>
+      <div className="result">
+        <span className="project-detail-subtitle">RESULTS:</span>
+        {result}
+      </div>
     </div>
   );
 }
