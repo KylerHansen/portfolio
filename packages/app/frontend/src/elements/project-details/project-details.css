@@ -1,9 +1,33 @@
 .project-details-card {
   background-color: var(--background-light);
   color: var(--primary-color);
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  padding: 20px 20px 200px 20px;
+}
+
+.project-detail-subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding-left: 15%;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: left;
+  max-height: 120px;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 10px;
+}
+
+.pd-paragraph {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
 }

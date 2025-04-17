@@ -3,18 +3,16 @@ import "./project-details.css";
 
 export function ProjectDetails({
   title,
-  objective,
-  description,
-  requirements,
-  stack,
-  imageUrls,
+  tools,
+  situation,
+  action,
   result,
+  imageUrls,
 }: {
   title: string;
-  objective: string;
-  description: string;
-  stack: string;
-  requirements: Array<string>;
+  situation: string;
+  action: string;
+  tools: Array<string>;
   imageUrls: Array<string>;
   result: string;
 }): React.ReactElement {
@@ -31,27 +29,26 @@ export function ProjectDetails({
           alt="Project Images"
         />
       </div>
-      <div className="objective">
-        <span className="project-detail-subtitle">OBJECTIVE:</span>
-        {objective}
+
+      <h3 className="project-detail-subtitle">TOOLS:</h3>
+      <div className="tools">
+        {tools.map((tool, index) => {
+          return (
+            <React.Fragment key={index}>
+              <li>{tool}</li>
+            </React.Fragment>
+          );
+        })}
       </div>
-      <div className="description">
-        <span className="project-detail-subtitle">DESCRIPTION:</span>
-        {description}
-      </div>
-      <div className="requirements">
-        <span className="project-detail-subtitle">REQUIREMENTS:</span>
-        {requirements}
-      </div>
-      {/* Bulleted list */}
-      <div className="stack">
-        <span className="project-detail-subtitle">TOOLS:</span>
-        {stack}
-      </div>
-      <div className="result">
-        <span className="project-detail-subtitle">RESULTS:</span>
-        {result}
-      </div>
+
+      <h3 className="project-detail-subtitle">SITUATION:</h3>
+      <div className="pd-paragraph">{situation}</div>
+
+      <h3 className="project-detail-subtitle">ACTION:</h3>
+      <div className="pd-paragraph">{action}</div>
+
+      <h3 className="project-detail-subtitle">RESULT:</h3>
+      <div className="pd-paragraph">{result}</div>
     </div>
   );
 }
