@@ -8,13 +8,15 @@ export function ProjectDetails({
   action,
   result,
   imageUrls,
+  additionalImagePath,
 }: {
   title: string;
+  tools: Array<string>;
   situation: string;
   action: string;
-  tools: Array<string>;
-  imageUrls: Array<string>;
   result: string;
+  imageUrls: Array<string>;
+  additionalImagePath?: string;
 }): React.ReactElement {
   const [imageIndex, setIndex] = React.useState(0);
 
@@ -25,7 +27,7 @@ export function ProjectDetails({
         <img
           className="project-image"
           /* TODO: GET SELECTED IMAGE URL */
-          src={"../assets/" + imageUrls[imageIndex]}
+          src={"../assets/" + additionalImagePath + imageUrls[imageIndex]}
           alt="Project Images"
         />
       </div>

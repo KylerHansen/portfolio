@@ -83,7 +83,7 @@ export function Projects() {
       title: "Attendance Counter",
       description:
         "This is a native android app I made for counting and graphing attendance.",
-      image: "assets/attendance.png",
+      image: "assets/attendance/attendance.png",
       link: Routes.AttendanceCounter,
       keywords: [
         ProjectKeywords.Java,
