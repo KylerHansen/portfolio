@@ -24,10 +24,39 @@ export function Home() {
       </div>
       <div className="home-card">
         <div className="section">
+          <div className="home-paragraph">
+            {/* New feature idea, to this paragraph something like, don't like the theme? Click here to change it. Then have the website transform into one of those
+              three.js animated websites. 
+            */}
+            <p>
+              Welcome to my portfolio! You might be thinking, why did a software
+              developer create a pine tree themed portfolio? It's because I love
+              camping and being in the mountains. Check out my projects page for
+              more info on my skills and projects, or see my interview page for
+              my answers to common interview questions. Also, I've hidden an
+              easter egg in this portfolio. See if you can find it!
+            </p>
+            <p>
+              I'm an experienced software developer that is eager to learn new
+              technologies, languages, and skills based on the company's needs.
+              I’m a kind person who can contribute to a positive and respectful
+              team culture. What drives me as a software developer is the sense
+              of accomplishment from solving problems, and the ability to
+              create. I love being able to create new features and turn ideas
+              into technical solutions especially if the new feature will help
+              someone.
+            </p>
+            <p>
+              Below is some general information about me some of which came from
+              assessments that I have taken.
+            </p>
+          </div>
+        </div>
+        <div className="section">
           <h1 title="A purpose statement is a simple but powerful declaration of who you are and what drives you in your career. It captures your deepest values, strengths, and passions, serving as a guiding light that fuels your ambition and leads you toward meaningful impact and fulfillment.">
             PURPOSE STATEMENT
           </h1>
-          <div className="purpose-statement">
+          <div className="home-paragraph">
             I use my talents of Execution, Imagination, Compassion, to perform
             my passions of Advocating, Leading, Analyzing, to accomplish my
             mission of Achievement by Producing Wins and Recognition.

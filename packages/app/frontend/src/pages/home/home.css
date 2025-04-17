@@ -38,7 +38,7 @@
   flex-direction: column;
 }
 
-.purpose-statement {
+.home-paragraph {
   width: 70%;
   align-self: center;
   color: var(--text-dark);
