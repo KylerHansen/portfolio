@@ -1,4 +1,4 @@
-.project-details-card {
+.pd-card {
   background-color: var(--background-light);
   color: var(--primary-color);
   display: flex;
@@ -6,23 +6,80 @@
   justify-content: space-between;
   gap: 20px;
   padding: 20px 20px 200px 20px;
+  box-sizing: border-box;
 }
 
-.project-detail-subtitle {
+.pd-gallery-container {
   display: flex;
   flex-direction: row;
-  align-items: start;
-  padding-left: 15%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+
+  @container (max-width: 768px) {
+    background-color: var(--background-dark);
+    border-radius: 0px;
+    width: 100%;
+  }
 }
 
-.tools {
+.pd-image-container {
+  background-color: var(--background-dark);
+  width: 900px;
+  height: 480px;
+  border-radius: 15px;
+}
+
+.pd-project-image {
+  object-fit: contain;
+  padding: 40px;
+  width: 200px;
+  height: 400px;
+
+  @container (max-width: 768px) {
+    padding: 10px;
+    width: 200px;
+  }
+}
+
+.pd-gallery-arrow {
+  color: var(--background-dark);
+
+  @container (max-width: 768px) {
+    color: var(--background-light);
+  }
+}
+
+.pd-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  @container (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pd-column-tools {
+  justify-self: center;
+  background-color: var(--accent-color);
+  color: var(--background-light);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.pd-subtitle {
+  text-align: start;
+}
+
+.pd-tools {
   display: flex;
   flex-direction: column;
   align-self: center;
-  text-align: left;
+  text-align: start;
   max-height: 120px;
   flex-wrap: wrap;
-  column-gap: 40px;
   row-gap: 10px;
 }
 
