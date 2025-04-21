@@ -16,7 +16,6 @@ export function AttendanceCounter() {
           "attendance_3.png",
           "attendance_4.png",
           "attendance_5.png",
-          "attendance_5.png",
           "attendance_6.png",
           "attendance_7.png",
         ]}
