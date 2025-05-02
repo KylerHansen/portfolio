@@ -25,6 +25,12 @@
   --border-radius: 16px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   color: var(--background-light);
   text-decoration: none;
