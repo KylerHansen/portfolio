@@ -1,3 +1,9 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-light);
+}
+
 .banner {
   width: 100%;
   background-position: center;
@@ -6,10 +12,13 @@
   height: 400px;
   display: flex;
   align-items: end;
+  background-color: var(--background-dark);
 }
 
 .banner-text {
   color: var(--background-light);
+  background-color: var(--background-dark);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-self: flex-start;

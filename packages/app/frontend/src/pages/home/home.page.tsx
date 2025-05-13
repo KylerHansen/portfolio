@@ -1,6 +1,7 @@
 import "./home.css";
 import { useState } from "react";
 import { CoreValues } from "../../elements/core-values/core-values";
+import { ParallaxBanner } from "../../elements/parallax/parallax-banner";
 
 export function Home() {
   const [bannerClickCount, setClickCount] = useState<number>(0);
@@ -15,19 +16,26 @@ export function Home() {
             setClickCount(0);
           }
         }}
-        className="banner"
-        style={{ backgroundImage: `url("assets/summerBanner.png")` }}
-      ></div>
-      <div className="banner-text">
-        <div className="title">KYLER HANSEN</div>
-        <div className="subtitle">SOFTWARE DEVELOPER</div>
+      >
+        {window.screen.width > 1100 ? (
+          <ParallaxBanner />
+        ) : (
+          <>
+            <div
+              className="banner"
+              style={{ backgroundImage: `url("assets/summerBanner.png")` }}
+            ></div>
+            <div className="banner-text">
+              <div className="title">KYLER HANSEN</div>
+              <div className="subtitle">SOFTWARE DEVELOPER</div>
+            </div>
+          </>
+        )}
       </div>
+
       <div className="home-card">
         <div className="section">
           <div className="home-paragraph">
-            {/* New feature idea, to this paragraph something like, don't like the theme? Click here to change it. Then have the website transform into one of those
-              three.js animated websites. 
-            */}
             <p>
               Welcome to my portfolio! You might be thinking, why did a software
               developer create a pine tree themed portfolio? It's because I love

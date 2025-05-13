@@ -1,0 +1,57 @@
+.parallax-container {
+  display: block;
+  position: relative;
+  z-index: 10;
+  -ms-overflow-style: none; /* Internet Explorer 10+ hide  scrollbar */
+  scrollbar-width: none; /* Firefox hide scroll bar */
+}
+
+.parallax-container::-webkit-scrollbar {
+  display: none; /*Safari and Chrome hide scroll bar*/
+}
+
+.animation-layer {
+  height: 720px;
+  width: 100%;
+  position: fixed;
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+#l1 {
+  background-image: url("assets/parallax/layer-1.svg");
+  background-color: var(--background-light);
+}
+
+#l2 {
+  background-image: url("assets/parallax/layer-2.svg");
+}
+
+#l3 {
+  background-image: url("assets/parallax/layer-3.svg");
+}
+
+#l4 {
+  background-image: url("assets/parallax/layer-4.svg");
+}
+
+#l5 {
+  background-image: url("assets/parallax/layer-5.svg");
+}
+
+#l6 {
+  background-image: url("assets/parallax/layer-6.svg");
+  height: 1020px;
+}
+
+#l7 {
+  background-image: url("assets/parallax/layer-7.svg");
+  height: 920px;
+}
+
+#l8 {
+  background-image: url("assets/parallax/layer-8.svg");
+
+  height: 1440px;
+}
