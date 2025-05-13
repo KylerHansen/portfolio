@@ -10,67 +10,65 @@ function App() {
 
   return (
     <>
-      <div className="app-container">
-        <nav className="standard-nav">
-          <Link to={Routes.Home}>HOME</Link>
-          {" | "}
-          <Link to={Routes.Projects}>PROJECTS</Link>
-          {" | "}
-          <Link to={Routes.Interview}>INTERVIEW</Link>
-          {/*{" | "}
+      <nav className="standard-nav">
+        <Link to={Routes.Home}>HOME</Link>
+        {" | "}
+        <Link to={Routes.Projects}>PROJECTS</Link>
+        {" | "}
+        <Link to={Routes.Interview}>INTERVIEW</Link>
+        {/*{" | "}
           <Link to={Routes.Blog}>BLOG</Link> */}
+      </nav>
+
+      {!isOpen ? (
+        <nav className="mobile-menu-icon">
+          <MountainSnow />
+          <Menu
+            onClick={() => {
+              setIsOpen(true);
+            }}
+          />
         </nav>
+      ) : (
+        <nav className="mobile-menu-icon">
+          <MountainSnow />
+          <X className="close-mobile-nav" onClick={() => setIsOpen(false)} />
+        </nav>
+      )}
 
-        {!isOpen ? (
-          <nav className="mobile-menu-icon">
-            <MountainSnow />
-            <Menu
-              onClick={() => {
-                setIsOpen(true);
-              }}
-            />
-          </nav>
-        ) : (
-          <nav className="mobile-menu-icon">
-            <MountainSnow />
-            <X className="close-mobile-nav" onClick={() => setIsOpen(false)} />
-          </nav>
-        )}
-
-        {isOpen ? (
-          <div className="mobile-nav">
-            <Link to={Routes.Home} onClick={() => setIsOpen(false)}>
-              HOME
-            </Link>
-            <Link to={Routes.Projects} onClick={() => setIsOpen(false)}>
-              PROJECTS
-            </Link>
-            <Link to={Routes.Interview} onClick={() => setIsOpen(false)}>
-              INTERVIEW
-            </Link>
-            {/*<Link to={Routes.Blog} onClick={() => setIsOpen(false)}>
+      {isOpen ? (
+        <div className="mobile-nav">
+          <Link to={Routes.Home} onClick={() => setIsOpen(false)}>
+            HOME
+          </Link>
+          <Link to={Routes.Projects} onClick={() => setIsOpen(false)}>
+            PROJECTS
+          </Link>
+          <Link to={Routes.Interview} onClick={() => setIsOpen(false)}>
+            INTERVIEW
+          </Link>
+          {/*<Link to={Routes.Blog} onClick={() => setIsOpen(false)}>
               BLOG
             </Link> */}
-          </div>
-        ) : (
-          <></>
-        )}
+        </div>
+      ) : (
+        <></>
+      )}
 
-        <Outlet />
+      <Outlet />
 
-        <ChatBot />
+      <ChatBot />
 
-        <footer>
-          <p>© Copyright {new Date().getFullYear()}</p>
-          <a href="https://www.linkedin.com/in/kyler-hansen-a365991a5">
-            LinkedIn
-          </a>
-          <div className="clue-3">
-            Congratulations you found clue #3! Lets play a game. Starting from
-            left to right, click on each of the core value icons once to begin.
-          </div>
-        </footer>
-      </div>
+      <footer>
+        <p>© Copyright {new Date().getFullYear()}</p>
+        <a href="https://www.linkedin.com/in/kyler-hansen-a365991a5">
+          LinkedIn
+        </a>
+        <div className="clue-3">
+          Congratulations you found clue #3! Lets play a game. Starting from
+          left to right, click on each of the core value icons once to begin.
+        </div>
+      </footer>
     </>
   );
 }

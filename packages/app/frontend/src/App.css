@@ -14,7 +14,7 @@ nav {
   color: var(--background-light);
   width: 100%;
   font-size: 14px;
-  position: sticky;
+  position: fixed;
   top: 0px;
   background-color: var(--background-dark);
 }
