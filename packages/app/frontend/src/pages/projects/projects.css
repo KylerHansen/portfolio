@@ -1,4 +1,5 @@
 .project-page {
+  margin-top: 60px;
   background-color: var(--background-light);
   color: var(--primary-color);
   padding: 20px;

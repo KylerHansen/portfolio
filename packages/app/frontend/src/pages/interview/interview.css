@@ -1,4 +1,5 @@
 .interview-page {
+  margin-top: 60px;
   color: var(--primary-color);
   background-color: var(--background-light);
   padding: 20px;
