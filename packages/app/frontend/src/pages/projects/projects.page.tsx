@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./projects.css";
 import { TreePine, X } from "lucide-react";
-import { Routes } from "../../main";
+import { Routes } from "../../routes";
 
 export function Projects() {
   const [appliedFilters, setAppliedFilter] = useState<ProjectKeywords[]>([]);

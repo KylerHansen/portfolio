@@ -1,4 +1,4 @@
-import { Routes } from "../../main";
+import { Routes } from "../../routes";
 import "./not-found.css";
 
 export function NotFound() {
