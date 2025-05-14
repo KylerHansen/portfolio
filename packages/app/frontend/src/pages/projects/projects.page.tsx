@@ -63,6 +63,7 @@ export function Projects() {
   }> = [
     {
       title: "SMS & Chat Messaging",
+      link: Routes.SMSChatSystem,
       description:
         "Created a chat messaging system that allowed the call center users to respond to both website chat widgets and SMS messages for hundreds of companies.",
       keywords: JillsOfficeStack,
