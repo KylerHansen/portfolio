@@ -20,38 +20,38 @@
 }
 
 #l1 {
-  background-image: url("assets/parallax/layer-1.svg");
+  background-image: url("/assets/parallax/layer-1.svg");
   background-color: var(--background-light);
 }
 
 #l2 {
-  background-image: url("assets/parallax/layer-2.svg");
+  background-image: url("/assets/parallax/layer-2.svg");
 }
 
 #l3 {
-  background-image: url("assets/parallax/layer-3.svg");
+  background-image: url("/assets/parallax/layer-3.svg");
 }
 
 #l4 {
-  background-image: url("assets/parallax/layer-4.svg");
+  background-image: url("/assets/parallax/layer-4.svg");
 }
 
 #l5 {
-  background-image: url("assets/parallax/layer-5.svg");
+  background-image: url("/assets/parallax/layer-5.svg");
 }
 
 #l6 {
-  background-image: url("assets/parallax/layer-6.svg");
+  background-image: url("/assets/parallax/layer-6.svg");
   height: 1020px;
 }
 
 #l7 {
-  background-image: url("assets/parallax/layer-7.svg");
+  background-image: url("/assets/parallax/layer-7.svg");
   height: 920px;
 }
 
 #l8 {
-  background-image: url("assets/parallax/layer-8.svg");
+  background-image: url("/assets/parallax/layer-8.svg");
 
   height: 1440px;
 }

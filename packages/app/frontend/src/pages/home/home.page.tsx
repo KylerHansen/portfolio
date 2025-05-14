@@ -1,7 +1,7 @@
 import "./home.css";
 import { useState } from "react";
 import { CoreValues } from "../../elements/core-values/core-values";
-/* import { ParallaxBanner } from "../../elements/parallax/parallax-banner"; */
+import { ParallaxBanner } from "../../elements/parallax/parallax-banner";
 
 export function Home() {
   const [bannerClickCount, setClickCount] = useState<number>(0);
@@ -17,8 +17,7 @@ export function Home() {
           }
         }}
       >
-        {/**This is too fancy for github pages */}
-        {/* {window.screen.width > 1100 ? (
+        {window.screen.width > 1100 ? (
           <ParallaxBanner />
         ) : (
           <>
@@ -31,16 +30,16 @@ export function Home() {
               <div className="subtitle">SOFTWARE DEVELOPER</div>
             </div>
           </>
-        )} */}
+        )}
 
-        <div
+        {/*      <div
           className="banner"
           style={{ backgroundImage: `url("assets/summerBanner.png")` }}
         ></div>
         <div className="banner-text">
           <div className="title">KYLER HANSEN</div>
           <div className="subtitle">SOFTWARE DEVELOPER</div>
-        </div>
+        </div> */}
       </div>
 
       <div className="home-card">
