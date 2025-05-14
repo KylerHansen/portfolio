@@ -10,14 +10,16 @@ export function ProjectDetails({
   result,
   imageUrls,
   additionalImagePath,
+  gitHubLink,
 }: {
   title: string;
   tools: Array<string>;
   situation: string;
   action: string;
   result: string;
-  imageUrls: Array<string>;
+  imageUrls: Array<{ url: string; comments?: string }>;
   additionalImagePath?: string;
+  gitHubLink?: string;
 }): React.ReactElement {
   const [imageIndex, setIndex] = React.useState(0);
 
@@ -53,9 +55,14 @@ export function ProjectDetails({
         <div className="pd-image-container">
           <img
             className="pd-project-image"
-            src={"../assets/" + additionalImagePath + imageUrls[imageIndex]}
+            src={
+              "../assets/" + additionalImagePath + imageUrls[imageIndex]?.url
+            }
             alt="Project Images"
           />
+          <div className="pd-image-comments">
+            {imageUrls[imageIndex]?.comments}
+          </div>
         </div>
         <div className="pd-gallery-arrow">
           <ChevronRight
@@ -90,6 +97,16 @@ export function ProjectDetails({
 
           <h3 className="pd-subtitle">RESULT:</h3>
           <div className="pd-paragraph">{result}</div>
+          <h3 className="pd-subtitle">CODE LINK:</h3>
+          <div className="pd-gh-link">
+            {gitHubLink ? (
+              <a href={gitHubLink} target="_blank">
+                {gitHubLink}
+              </a>
+            ) : (
+              "Private repository, reach out to me directly to see it"
+            )}
+          </div>
         </div>
       </div>
     </div>
