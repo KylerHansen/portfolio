@@ -31,15 +31,6 @@ export function Home() {
             </div>
           </>
         )}
-
-        {/*      <div
-          className="banner"
-          style={{ backgroundImage: `url("assets/summerBanner.png")` }}
-        ></div>
-        <div className="banner-text">
-          <div className="title">KYLER HANSEN</div>
-          <div className="subtitle">SOFTWARE DEVELOPER</div>
-        </div> */}
       </div>
 
       <div className="home-card">
