@@ -90,13 +90,25 @@ export function ProjectDetails({
 
         <div>
           <h3 className="pd-subtitle">SITUATION:</h3>
-          <div className="pd-paragraph">{situation}</div>
+          <div className="pd-paragraph">
+            {situation.split("~").map((line, index) => (
+              <p key={index}>{line}</p>
+            ))}
+          </div>
 
           <h3 className="pd-subtitle">ACTION:</h3>
-          <div className="pd-paragraph">{action}</div>
+          <div className="pd-paragraph">
+            {action.split("~").map((line, index) => (
+              <p key={index}>{line}</p>
+            ))}
+          </div>
 
           <h3 className="pd-subtitle">RESULT:</h3>
-          <div className="pd-paragraph">{result}</div>
+          <div className="pd-paragraph">
+            {result.split("~").map((line, index) => (
+              <p key={index}>{line}</p>
+            ))}
+          </div>
           <h3 className="pd-subtitle">CODE LINK:</h3>
           <div className="pd-gh-link">
             {gitHubLink ? (
