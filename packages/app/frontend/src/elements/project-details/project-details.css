@@ -78,6 +78,7 @@
   color: var(--background-light);
   padding: 20px;
   border-radius: 15px;
+  overflow-y: auto;
 }
 
 .pd-subtitle {
@@ -90,12 +91,14 @@
   align-self: center;
   text-align: start;
   max-height: 120px;
-  flex-wrap: wrap;
-  row-gap: 10px;
+}
+
+.pd-tools li {
+  padding: 10px;
 }
 
 .pd-paragraph {
-  text-align: center;
+  text-align: left;
   padding-left: 20%;
   padding-right: 20%;
 }

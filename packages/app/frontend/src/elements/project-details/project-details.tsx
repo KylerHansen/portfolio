@@ -116,7 +116,7 @@ export function ProjectDetails({
                 {gitHubLink}
               </a>
             ) : (
-              "Private repository. Reach out to me directly and I will share it if I can."
+              "Private repository."
             )}
           </div>
         </div>
