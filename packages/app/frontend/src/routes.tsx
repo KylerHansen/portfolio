@@ -9,4 +9,5 @@ export enum Routes {
   ScavengerHuntEnding = "/portfolio/4txzaq2l3i4y5vb",
   AttendanceCounter = "/portfolio/projects/attendance-counter",
   SMSChatSystem = "/portfolio/projects/sms-chat-system",
+  OutboundDashboard = "/portfolio/projects/outbound-dashboard",
 }

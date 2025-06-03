@@ -73,9 +73,10 @@ export function Projects() {
       description:
         "Created a dashboard for the outbound team. This turned hundreds of excel spreadsheets into one convenient easy to use dashboard.",
       keywords: JillsOfficeStack,
+      link: Routes.OutboundDashboard,
     },
     {
-      title: "Call Dashboard Overhaul UX/UI",
+      title: "Call Screen Overhaul UX/UI",
       description:
         "Completely redesigned the call dashboard to improve the user experience, increase efficiency, and reduce employee mistakes.",
       keywords: JillsOfficeStack,

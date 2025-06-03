@@ -11,6 +11,7 @@ import { NotFound } from "./pages/not-found/not-found";
 import { AttendanceCounter } from "./pages/projects/attendance-counter";
 import { Routes } from "./routes";
 import { SMSChatSystem } from "./pages/projects/sms-chat-system";
+import { OutboundDashboard } from "./pages/projects/outbound-dashboard";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
       { path: Routes.ScavengerHuntEnding, element: <ScavengerHuntEnding /> },
       { path: Routes.AttendanceCounter, element: <AttendanceCounter /> },
       { path: Routes.SMSChatSystem, element: <SMSChatSystem /> },
+      { path: Routes.OutboundDashboard, element: <OutboundDashboard /> },
     ],
   },
 ]);

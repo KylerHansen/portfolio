@@ -44,14 +44,18 @@ export function ProjectDetails({
     <div className="pd-card">
       <h1>{title.toUpperCase()}</h1>
       <div className="pd-gallery-container">
-        <div className="pd-gallery-arrow">
-          <ChevronLeft
-            size={40}
-            onClick={() => {
-              navigateGallery(imageIndex, GalleryDirection.Left);
-            }}
-          />
-        </div>
+        {maxIndex < 1 ? (
+          ""
+        ) : (
+          <div className="pd-gallery-arrow">
+            <ChevronLeft
+              size={40}
+              onClick={() => {
+                navigateGallery(imageIndex, GalleryDirection.Left);
+              }}
+            />
+          </div>
+        )}
         <div className="pd-image-container">
           <img
             className="pd-project-image"
@@ -64,14 +68,18 @@ export function ProjectDetails({
             {imageUrls[imageIndex]?.comments}
           </div>
         </div>
-        <div className="pd-gallery-arrow">
-          <ChevronRight
-            size={40}
-            onClick={() => {
-              navigateGallery(imageIndex, GalleryDirection.Right);
-            }}
-          />
-        </div>
+        {maxIndex < 1 ? (
+          ""
+        ) : (
+          <div className="pd-gallery-arrow">
+            <ChevronRight
+              size={40}
+              onClick={() => {
+                navigateGallery(imageIndex, GalleryDirection.Right);
+              }}
+            />
+          </div>
+        )}
       </div>
 
       <div className="pd-layout">
