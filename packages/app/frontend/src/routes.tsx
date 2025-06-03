@@ -10,4 +10,5 @@ export enum Routes {
   AttendanceCounter = "/portfolio/projects/attendance-counter",
   SMSChatSystem = "/portfolio/projects/sms-chat-system",
   OutboundDashboard = "/portfolio/projects/outbound-dashboard",
+  BiteHero = "/portfolio/projects/bite-hero",
 }

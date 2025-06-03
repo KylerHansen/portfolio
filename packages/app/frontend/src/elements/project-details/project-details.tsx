@@ -9,8 +9,8 @@ export function ProjectDetails({
   action,
   result,
   imageUrls,
-  additionalImagePath,
-  gitHubLink,
+  assetFolderName,
+  projectLink,
 }: {
   title: string;
   tools: Array<string>;
@@ -18,8 +18,8 @@ export function ProjectDetails({
   action: string;
   result: string;
   imageUrls: Array<{ url: string; comments?: string }>;
-  additionalImagePath?: string;
-  gitHubLink?: string;
+  assetFolderName?: string;
+  projectLink?: string;
 }): React.ReactElement {
   const [imageIndex, setIndex] = React.useState(0);
 
@@ -59,9 +59,7 @@ export function ProjectDetails({
         <div className="pd-image-container">
           <img
             className="pd-project-image"
-            src={
-              "../assets/" + additionalImagePath + imageUrls[imageIndex]?.url
-            }
+            src={"../assets/" + assetFolderName + imageUrls[imageIndex]?.url}
             alt="Project Images"
           />
           <div className="pd-image-comments">
@@ -117,11 +115,11 @@ export function ProjectDetails({
               <p key={index}>{line}</p>
             ))}
           </div>
-          <h3 className="pd-subtitle">CODE LINK:</h3>
+          <h3 className="pd-subtitle">PROJECT LINK:</h3>
           <div className="pd-gh-link">
-            {gitHubLink ? (
-              <a href={gitHubLink} target="_blank">
-                {gitHubLink}
+            {projectLink ? (
+              <a href={projectLink} target="_blank">
+                {projectLink}
               </a>
             ) : (
               "Private repository."

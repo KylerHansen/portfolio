@@ -33,6 +33,7 @@ export function Projects() {
     Redis = "Redis",
     Monorepo = "Monorepo",
     Docker = "Docker",
+    PWA = "Progressive Web App",
   }
 
   const JillsOfficeStack = [
@@ -74,6 +75,12 @@ export function Projects() {
         "Created a dashboard for the outbound team. This turned hundreds of excel spreadsheets into one convenient easy to use dashboard.",
       keywords: JillsOfficeStack,
       link: Routes.OutboundDashboard,
+    },
+    { title: "Bite Hero",
+      image: "assets/bite-hero/bite-hero-icon.png",
+      description: "Mobile app that I created to help gamify eating for my toddlers who would rather play than eat dinner.",
+      link: Routes.BiteHero,
+      keywords: [ProjectKeywords.PWA, ProjectKeywords.CSS, ProjectKeywords.HTML, ProjectKeywords.React, ProjectKeywords.Typescript, ProjectKeywords.NodeJS, ProjectKeywords.Personal],
     },
     {
       title: "Call Screen Overhaul UX/UI",

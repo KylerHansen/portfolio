@@ -54,7 +54,7 @@ export function SMSChatSystem() {
               "This is the perspective of the representative, on the left you can see there are no chats in the queue and one chat has been assigned to the agent. Hidden on this page is information about the customer and tools that aid in assisting the customer. The agent can have multiple chats assigned the them. Chats could be coming from customers who texted the company phone number, or customers using the company website chat widget.",
           },
         ]}
-        additionalImagePath="sms-chat-system/"
+        assetFolderName="sms-chat-system/"
         result="The results of this project are an estimated 287% increase in productivity. Profitability was increased in several ways. ~1. Top line profitability increased by creating a new marketable product. ~2. Bottom line profitability increased by increasing representatives productivity. This chat system allowed the representatives to handle 3-5 customers at a time instead of just 1. ~3. These new features also laid the ground work for other new products such as hot lead texting, and call queue tree messaging. ~Lastly I learned so much about Twilio that I became the companies go to 'Twilio Expert'. I was able to help, correct mistakes in other departments, monitor thousands of active company numbers to ensure SMS compliancy was followed, and lastly I was able to identify and propose a solution to a large architectural ticking time bomb that existed in the legacy infrastructure. The results of my work in this area led to my promotion to Senior Software Engineer I."
       ></ProjectDetails>
     </div>

@@ -42,8 +42,8 @@ export function AttendanceCounter() {
               "Once a graph is generated, the top bar tools allow you to share the graph via SMS or export as a csv and email. ",
           },
         ]}
-        additionalImagePath="attendance/"
-        gitHubLink="https://github.com/KylerHansen/Attendance-Counter-Pro"
+        assetFolderName="attendance/"
+        projectLink="https://github.com/KylerHansen/Attendance-Counter-Pro"
         result="I completed all the requirements and the minimum viable product (MVP) for this was completed. I learned more about how to utilize RoomDB, and Android permissions. I did not publish this on the store because my church ended up releasing a feature in their app specific for clerk use that had internal reporting built into it. Effectively making this project obsolete."
       ></ProjectDetails>
     </div>

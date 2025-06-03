@@ -35,7 +35,7 @@ export function OutboundDashboard() {
             comments: "I have permission from the company to show this image.",
           },
         ]}
-        additionalImagePath="sms-chat-system/"
+        assetFolderName="sms-chat-system/"
       ></ProjectDetails>
     </div>
   );
