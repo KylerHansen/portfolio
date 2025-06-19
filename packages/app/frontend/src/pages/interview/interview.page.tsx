@@ -16,12 +16,12 @@ export function Interview() {
     {
       question: "What is your experience at Jill's Office?",
       answer:
-        "At Jill’s Office, I created the website chat & SMS system, which connects customers from hundreds of companies to live representatives. I built the chat widget, sms queue system, and Twilio API integrations, ensuring compliance with A2P 10DLC regulations. I also improved billing by integrating Stripe’s usage-based subscriptions, simplifying future pricing changes. Additionally, I developed an outbound call dashboard, redesigned the call screen to reduce errors, and created internal pd-toolslike custom ringtones and an announcement system to enhance efficiency and morale. My work there increased scalability, streamlined operations, increased profitability, and improved customer communications.",
+        "At Jill’s Office, I created the website chat & SMS system, which connects customers from hundreds of companies to live representatives. I built the chat widget, sms queue system, and Twilio API integrations, ensuring compliance with A2P 10DLC regulations. I also improved billing by integrating Stripe’s usage-based subscriptions, simplifying future pricing changes. Additionally, I developed an outbound call dashboard, redesigned the call screen to reduce errors, and created internal tools like custom ringtones and an announcement system to enhance efficiency and morale. My work there increased scalability, streamlined operations, increased profitability, and improved customer communications.",
     },
     {
       question: "Why do you like software engineering?",
       answer:
-        "I love to build stuff, and programming is just one of the many mediums I can use to bring ideas to life. I also enjoy puzzles and the sense of accomplishment I get from solving problems. Each of these naturally play a role in programming.",
+        "I love to build stuff and the chance to be creative, and programming is just one of the many mediums I can use to bring ideas to life. I also enjoy puzzles and the sense of accomplishment I get from solving problems. Each of these naturally play a role in programming.",
     },
     {
       question: "What are you looking for in your next role?",
