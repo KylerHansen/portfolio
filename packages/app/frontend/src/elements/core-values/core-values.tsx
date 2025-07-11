@@ -45,7 +45,7 @@ export function CoreValues(): React.ReactElement {
   }
 
   async function coreValueIconClick(index: number) {
-    const numberOfRounds = 6;
+    const numberOfRounds = 5;
 
     if (isGameRunning) {
       const playerIconPattern = [...clickedIcons, index];

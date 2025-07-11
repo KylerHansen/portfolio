@@ -19,7 +19,6 @@ function App() {
         {/*{" | "}
           <Link to={Routes.Blog}>BLOG</Link> */}
       </nav>
-
       {!isOpen ? (
         <nav className="mobile-menu-icon">
           <MountainSnow />
@@ -35,7 +34,6 @@ function App() {
           <X className="close-mobile-nav" onClick={() => setIsOpen(false)} />
         </nav>
       )}
-
       {isOpen ? (
         <div className="mobile-nav">
           <Link to={Routes.Home} onClick={() => setIsOpen(false)}>
@@ -54,11 +52,8 @@ function App() {
       ) : (
         <></>
       )}
-
       <Outlet />
-
       <ChatBot />
-
       <footer>
         <p>© Copyright {new Date().getFullYear()}</p>
         <a href="https://www.linkedin.com/in/kyler-hansen-a365991a5">

@@ -13,6 +13,7 @@ import { Routes } from "./routes";
 import { SMSChatSystem } from "./pages/projects/sms-chat-system";
 import { OutboundDashboard } from "./pages/projects/outbound-dashboard";
 import { BiteHero } from "./pages/projects/bite-hero";
+import { DigitalClueSheet } from "./pages/projects/digital-clue-sheet";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
       { path: Routes.SMSChatSystem, element: <SMSChatSystem /> },
       { path: Routes.OutboundDashboard, element: <OutboundDashboard /> },
       { path: Routes.BiteHero, element: <BiteHero /> },
+      { path: Routes.DigitalClueSheet, element: <DigitalClueSheet /> },
     ],
   },
 ]);

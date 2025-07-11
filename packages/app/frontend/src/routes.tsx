@@ -11,4 +11,5 @@ export enum Routes {
   SMSChatSystem = "/portfolio/projects/sms-chat-system",
   OutboundDashboard = "/portfolio/projects/outbound-dashboard",
   BiteHero = "/portfolio/projects/bite-hero",
+  DigitalClueSheet = "/portfolio/projects/clue-sheet",
 }

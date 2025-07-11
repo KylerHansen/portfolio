@@ -34,6 +34,7 @@ export function Projects() {
     Monorepo = "Monorepo",
     Docker = "Docker",
     PWA = "Progressive Web App",
+    Vue = "Vue.js",
   }
 
   const JillsOfficeStack = [
@@ -63,6 +64,22 @@ export function Projects() {
     image?: string;
   }> = [
     {
+      title: "Digital Clue Sheet",
+      link: Routes.DigitalClueSheet,
+      image: "assets/digital-clue-sheet/dcs-icon.png",
+      description:
+        "Created my own digital clue sheet to help me keep track of the game when I play Clue.",
+      keywords: [
+        ProjectKeywords.Vue,
+        ProjectKeywords.Typescript,
+        ProjectKeywords.NodeJS,
+        ProjectKeywords.HTML,
+        ProjectKeywords.CSS,
+        ProjectKeywords.PWA,
+        ProjectKeywords.Personal,
+      ],
+    },
+    {
       title: "SMS & Chat Messaging",
       link: Routes.SMSChatSystem,
       description:
@@ -76,11 +93,21 @@ export function Projects() {
       keywords: JillsOfficeStack,
       link: Routes.OutboundDashboard,
     },
-    { title: "Bite Hero",
+    {
+      title: "Bite Hero",
       image: "assets/bite-hero/bite-hero-icon.png",
-      description: "Mobile app that I created to help gamify eating for my toddlers who would rather play than eat dinner.",
+      description:
+        "Mobile app that I created to help gamify eating for my toddlers who would rather play than eat dinner.",
       link: Routes.BiteHero,
-      keywords: [ProjectKeywords.PWA, ProjectKeywords.CSS, ProjectKeywords.HTML, ProjectKeywords.React, ProjectKeywords.Typescript, ProjectKeywords.NodeJS, ProjectKeywords.Personal],
+      keywords: [
+        ProjectKeywords.PWA,
+        ProjectKeywords.CSS,
+        ProjectKeywords.HTML,
+        ProjectKeywords.React,
+        ProjectKeywords.Typescript,
+        ProjectKeywords.NodeJS,
+        ProjectKeywords.Personal,
+      ],
     },
     {
       title: "Call Screen Overhaul UX/UI",
